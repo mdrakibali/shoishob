@@ -1,4 +1,4 @@
-import { GameData, MemoryData, SubmissionData, ArchiveItem } from "@/types"
+import { GameData, MemoryData, SubmissionData, ArchiveItem, FoodData, PlaceData } from "@/types"
 
 export const MOCK_MEMORIES: MemoryData[] = [
   {
@@ -210,5 +210,47 @@ export const MOCK_ARCHIVES: ArchiveItem[] = [
     title: "রঙিন বরফ আইসক্রিম", description: "গরমের দিনে ভ্যানে করে বিক্রি হওয়া সেই রঙিন বরফ আইসক্রিম ছিল শৈশবের অন্যতম আকর্ষণ।",
     imageUrl: "/assets/memory_placeholder.png",
     meta: { year: "২০০০", district: "ঢাকা", type: "খাবার" }
+  }
+]
+
+export const MOCK_FOOD: FoodData[] = [
+  {
+    id: "1",
+    slug: "jhalmuri",
+    title: "স্কুল গেটের ঝালমুড়ি",
+    description: "স্কুলের গেটে মামার বানানো ঝালমুড়ির স্বাদ আর কোথাও পাওয়া যেত না।",
+    year: "২০০৫",
+    district: "ঢাকা",
+    imageUrl: "/assets/memory_placeholder.png",
+  },
+  {
+    id: "2",
+    slug: "borof-kol",
+    title: "রঙিন বরফ আইসক্রিম",
+    description: "গরমের দিনে ভ্যানে করে বিক্রি হওয়া সেই রঙিন বরফ আইসক্রিম ছিল শৈশবের অন্যতম আকর্ষণ।",
+    year: "২০০০",
+    district: "রাজশাহী",
+    imageUrl: "/assets/memory_placeholder.png",
+  }
+]
+
+export const MOCK_PLACES: PlaceData[] = [
+  {
+    id: "1",
+    slug: "pukur-par",
+    title: "বাড়ির পেছনের পুকুর পাড়",
+    description: "দুপুরে লুকিয়ে পুকুরে সাঁতার কাটার স্মৃতি আজও মনে পড়ে।",
+    year: "১৯৯৮",
+    district: "সিলেট",
+    imageUrl: "/assets/memory_placeholder.png",
+  },
+  {
+    id: "2",
+    slug: "chader-haat",
+    title: "চাঁদের হাট মেলা",
+    description: "বৈশাখে মেলায় গিয়ে নাগরদোলায় ওঠার আনন্দ।",
+    year: "২০০২",
+    district: "বরিশাল",
+    imageUrl: "/assets/memory_placeholder.png",
   }
 ]

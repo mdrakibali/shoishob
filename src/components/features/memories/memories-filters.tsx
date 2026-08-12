@@ -5,7 +5,7 @@ import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
 import { Button } from "@/components/ui/button"
 
-export function ExploreFilters() {
+export function MemoriesFilters() {
   const searchParams = useSearchParams()
   const pathname = usePathname()
   const router = useRouter()

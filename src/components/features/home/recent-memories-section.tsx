@@ -1,7 +1,5 @@
-import Link from "next/link"
-import { ArchiveCard } from "@/components/features/archive/archive-card"
-import { type ArchiveItem } from "@/types"
-import { PageSection, SectionHeader } from "@/components/ui/section"
+import { MemoryCard } from "@/components/shared/memory-card"
+import { Button } from "@/components/ui/button"
 import {
   Carousel,
   CarouselContent,
@@ -9,9 +7,15 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import { Button } from "@/components/ui/button"
+import { PageSection, SectionHeader } from "@/components/ui/section"
+import { type MemoryData } from "@/types"
+import Link from "next/link"
 
-export function RecentMemoriesSection({ memories }: { memories: ArchiveItem[] }) {
+interface RecentMemoriesSectionProps {
+  memories?: MemoryData[]
+}
+
+export function RecentMemoriesSection({ memories = [] }: RecentMemoriesSectionProps) {
   return (
     <PageSection className="bg-background">
       <SectionHeader 
@@ -33,8 +37,8 @@ export function RecentMemoriesSection({ memories }: { memories: ArchiveItem[] })
         <CarouselContent className="-ml-4 md:-ml-6">
           {memories.map((memory) => (
             <CarouselItem key={memory.id} className="pl-4 md:basis-1/2 md:pl-6 lg:basis-1/3">
-              <ArchiveCard item={memory} viewMode="grid" />
-            </CarouselItem>
+              <MemoryCard memory={memory} />
+te            </CarouselItem>
           ))}
         </CarouselContent>
         <div className="mt-8 flex justify-end gap-2 pr-4">

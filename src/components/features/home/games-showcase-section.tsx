@@ -1,6 +1,6 @@
 import Link from "next/link"
-import { ArchiveCard } from "@/components/features/archive/archive-card"
-import { type ArchiveItem } from "@/types"
+import { GameCard } from "@/components/shared/game-card"
+import { type GameData } from "@/types"
 import { PageSection, SectionHeader } from "@/components/ui/section"
 import {
   Carousel,
@@ -11,7 +11,11 @@ import {
 } from "@/components/ui/carousel"
 import { Button } from "@/components/ui/button"
 
-export function GamesShowcaseSection({ games }: { games: ArchiveItem[] }) {
+interface GamesShowcaseSectionProps {
+  games?: GameData[]
+}
+
+export function GamesShowcaseSection({ games = [] }: GamesShowcaseSectionProps) {
   return (
     <PageSection className="bg-background">
       <SectionHeader 
@@ -34,7 +38,7 @@ export function GamesShowcaseSection({ games }: { games: ArchiveItem[] }) {
         <CarouselContent className="-ml-4 md:-ml-6">
           {games.map((game) => (
             <CarouselItem key={game.id} className="pl-4 md:basis-1/2 md:pl-6 lg:basis-1/3">
-              <ArchiveCard item={game} viewMode="grid" />
+              <GameCard game={game} />
             </CarouselItem>
           ))}
         </CarouselContent>

@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Search } from "lucide-react"
 
-export function ExploreSearch() {
+export function MemoriesSearch() {
   const searchParams = useSearchParams()
   const pathname = usePathname()
   const router = useRouter()

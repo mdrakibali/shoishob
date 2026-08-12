@@ -10,9 +10,9 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { Filter } from "lucide-react"
-import { ExploreFilters } from "@/components/features/explore/explore-filters"
+import { MemoriesFilters } from "@/components/features/memories/memories-filters"
 
-export function ExploreMobileFilter() {
+export function MemoriesMobileFilter() {
   return (
     <Sheet>
       <SheetTrigger
@@ -27,7 +27,7 @@ export function ExploreMobileFilter() {
         <SheetHeader className="mb-6 text-left">
           <SheetTitle className="text-2xl">ফিল্টার</SheetTitle>
         </SheetHeader>
-        <ExploreFilters />
+        <MemoriesFilters />
         <div className="mt-8">
           <SheetClose
             render={

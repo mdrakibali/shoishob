@@ -8,21 +8,13 @@ import { MobileMenu } from "@/components/layout/mobile-menu"
 import { ThemeToggle } from "@/components/layout/theme-toggle"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogTrigger } from "@/components/ui/dialog"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 
 const navigation = [
   { name: "Home", href: "/" },
-  { 
-    name: "Archive", 
-    href: "/archive",
-    subItems: [
-      { name: "সব সংগ্রহশালা", href: "/archive" },
-      { name: "খেলাধুলা", href: "/archive/games" },
-      { name: "স্মৃতি", href: "/archive/memories" },
-      { name: "খাবার", href: "/archive/food" },
-      { name: "জায়গা", href: "/archive/places" },
-    ]
-  },
+  { name: "Games", href: "/games" },
+  { name: "Memories", href: "/memories" },
+  { name: "Food", href: "/food" },
+  { name: "Places", href: "/places" },
   { name: "About", href: "/about" },
 ]
 
@@ -47,28 +39,13 @@ export function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-6 md:flex">
           {navigation.map((item) => (
-            item.subItems ? (
-              <DropdownMenu key={item.name}>
-                <DropdownMenuTrigger className={`hover:text-primary text-sm font-medium transition-colors outline-none ${pathname.startsWith(item.href) ? "text-primary" : "text-secondary-foreground"}`}>
-                  {item.name}
-                </DropdownMenuTrigger>
-                <DropdownMenuContent>
-                  {item.subItems.map(subItem => (
-                    <DropdownMenuItem key={subItem.name}>
-                      <Link href={subItem.href} className="w-full">{subItem.name}</Link>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
-            ) : (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`hover:text-primary text-sm font-medium transition-colors ${ pathname === item.href ? "text-primary" : "text-secondary-foreground" }`}
-              >
-                {item.name}
-              </Link>
-            )
+            <Link
+              key={item.name}
+              href={item.href}
+              className={`hover:text-primary text-sm font-medium transition-colors ${ pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href)) ? "text-primary" : "text-secondary-foreground" }`}
+            >
+              {item.name}
+            </Link>
           ))}
         </nav>
 

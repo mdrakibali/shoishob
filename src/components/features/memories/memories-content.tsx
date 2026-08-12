@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { type MemoryData } from "@/types"
 import { useMemo, useState } from "react"
 
-export function ExploreContent({ memories }: { memories: MemoryData[] }) {
+export function MemoriesContent({ memories }: { memories: MemoryData[] }) {
   const [viewMode, setViewMode] = useState<ViewMode>("grid")
   const [sortBy, setSortBy] = useState<SortOption>("newest")
 

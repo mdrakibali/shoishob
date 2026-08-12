@@ -16,7 +16,6 @@ export interface ArchiveItem {
   }
 }
 
-// Defines the structure of a memory entry (deprecated, transitioning to ArchiveItem)
 export interface MemoryData {
   id: string
   slug: string
@@ -29,13 +28,11 @@ export interface MemoryData {
   imageUrl: string
 }
 
-// Defines the props for the MemoryCard component
 export interface MemoryCardProps {
   memory: MemoryData
   className?: string
 }
 
-// Defines the structure of a game entry
 export interface GameData {
   id: string
   slug: string
@@ -46,13 +43,11 @@ export interface GameData {
   imageUrl: string
 }
 
-// Defines the props for the GameCard component
 export interface GameCardProps {
   game: GameData
   className?: string
 }
 
-// Defines the structure of a submission entry for the admin panel
 export interface SubmissionData {
   id: string
   title: string
@@ -63,4 +58,35 @@ export interface SubmissionData {
   status: "Pending" | "Approved" | "Rejected"
   created: string
 }
+
+export interface FoodData {
+  id: string
+  slug: string
+  title: string
+  description: string
+  year: string
+  district: string
+  imageUrl: string
+}
+
+export interface FoodCardProps {
+  food: FoodData
+  className?: string
+}
+
+export interface PlaceData {
+  id: string
+  slug: string
+  title: string
+  description: string
+  year: string
+  district: string
+  imageUrl: string
+}
+
+export interface PlaceCardProps {
+  place: PlaceData
+  className?: string
+}
+
 export * from "./components"
