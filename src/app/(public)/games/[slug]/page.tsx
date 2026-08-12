@@ -1,7 +1,7 @@
 import { GameDetailHeader } from "@/components/features/games/game-detail-header"
 import { GameInstructions } from "@/components/features/games/game-instructions"
 import { GameRelatedContent } from "@/components/features/games/game-related-content"
-import { MOCK_GAMES } from "@/lib/mock-data"
+import { MOCK_GAMES, MOCK_MEMORIES } from "@/lib/mock-data"
 import { notFound } from "next/navigation"
 
 export default async function GameDetailsPage({
@@ -45,7 +45,7 @@ export default async function GameDetailsPage({
         </div>
         
         <div className="lg:col-span-1">
-          <GameRelatedContent />
+          <GameRelatedContent memories={MOCK_MEMORIES.slice(0, 2)} relatedGames={MOCK_GAMES.slice(0, 2)} />
         </div>
       </div>
     </div>

@@ -15,7 +15,7 @@ export function FeaturedStorySection() {
         </div>
 
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg md:aspect-video lg:aspect-square">
+          <div className="relative aspect-4/3 w-full overflow-hidden rounded-lg md:aspect-video lg:aspect-square">
             <Image
               src="/assets/memory_placeholder.png"
               alt="Featured memory"

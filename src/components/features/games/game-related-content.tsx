@@ -2,7 +2,7 @@ import { MemoryCard } from "@/components/shared/memory-card"
 import { GameCard } from "@/components/shared/game-card"
 import { GameRelatedContentProps } from "@/types"
 
-export function GameRelatedContent({ memories, relatedGames }: GameRelatedContentProps) {
+export function GameRelatedContent({ memories = [], relatedGames = [] }: GameRelatedContentProps) {
   return (
     <>
       <div className="mb-16">

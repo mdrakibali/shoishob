@@ -38,7 +38,7 @@ export function ViewControls({
         <div className="flex items-center gap-2">
           <span className="text-muted-foreground hidden text-sm sm:inline-block">সর্ট করুন:</span>
           <Select value={sortBy} onValueChange={(v) => onSortByChange(v as SortOption)}>
-            <SelectTrigger className="w-[140px] bg-background">
+            <SelectTrigger className="w-35 bg-background">
               <SelectValue placeholder="সর্ট করুন" />
             </SelectTrigger>
             <SelectContent>

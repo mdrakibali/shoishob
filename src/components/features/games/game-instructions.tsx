@@ -1,16 +1,22 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
-export function GameInstructions() {
+interface GameInstructionsProps {
+  instructions: { title: string; description: string }[]
+  rules: string[]
+}
+
+export function GameInstructions({ instructions, rules }: GameInstructionsProps) {
   return (
     <div className="prose prose-lg dark:prose-invert prose-headings: prose-a:text-primary max-w-none">
-      <h2 className="text-foreground text-3xl font-bold">গোল্লাছুট কী?</h2>
-      <p className="text-secondary-foreground text-lg leading-relaxed">
-        গোল্লাছুট বাংলাদেশের একটি অন্যতম জনপ্রিয় গ্রামীণ খেলা। এই খেলায় দল বেঁধে দৌড়াদৌড়ি করতে হয়।
-        মাঠের এক প্রান্তে একটি ছোট গোল ঘর (গোল্লা) থাকে, আর সেখান থেকে নির্দিষ্ট দূরত্বে একটি বড়
-        সীমানা থাকে। এই খেলায় একজন 'রাজা' থাকে, যার কাজ হলো প্রতিপক্ষের ছোঁয়া থেকে বাঁচিয়ে সীমানার
-        বাইরে যাওয়া।
-      </p>
+      {instructions.map((inst, index) => (
+        <div key={index}>
+          <h2 className="text-foreground text-3xl font-bold">{inst.title}</h2>
+          <p className="text-secondary-foreground text-lg leading-relaxed">
+            {inst.description}
+          </p>
+        </div>
+      ))}
 
       <div className="my-12"></div>
 
@@ -19,6 +25,20 @@ export function GameInstructions() {
         <li>একটি উন্মুক্ত মাঠ বা বড় ফাঁকা জায়গা</li>
         <li>মাটিতে দাগ কাটার জন্য একটি কাঠি বা চক</li>
         <li>৬ থেকে ১২ জন খেলোয়াড় (দুই দলে বিভক্ত)</li>
+      </ul>
+
+      <div className="my-12"></div>
+
+      <h2 className="text-foreground mt-12 text-2xl font-bold">খেলার নিয়মকানুন</h2>
+      <ul className="text-secondary-foreground space-y-3 text-lg">
+        {rules.map((rule, index) => (
+          <li key={index} className="flex items-start gap-3">
+            <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-secondary text-xs font-semibold text-secondary-foreground">
+              {index + 1}
+            </span>
+            <span>{rule}</span>
+          </li>
+        ))}
       </ul>
 
       <div className="my-12"></div>
@@ -53,7 +73,7 @@ export function GameInstructions() {
         </div>
 
         <div className="flex gap-4">
-          <div className="bg-primary text-primary-foreground flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl text-xl font-bold shadow-sm">
+          <div className="bg-primary text-primary-foreground flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-xl font-bold shadow-sm">
             03
           </div>
           <div>
@@ -66,7 +86,7 @@ export function GameInstructions() {
         </div>
 
         <div className="flex gap-4">
-          <div className="bg-primary text-primary-foreground flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl text-xl font-bold shadow-sm">
+          <div className="bg-primary text-primary-foreground flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-xl font-bold shadow-sm">
             04
           </div>
           <div>

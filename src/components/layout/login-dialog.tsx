@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 
 export function LoginDialog() {
   return (
-    <DialogContent className="sm:max-w-[425px]">
+    <DialogContent className="sm:max-w-106.25">
       <DialogHeader>
         <DialogTitle className="text-primary mb-2 text-center text-2xl">
           Shoishob

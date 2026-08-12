@@ -48,6 +48,11 @@ export interface GameCardProps {
   className?: string
 }
 
+export interface GameRelatedContentProps {
+  memories?: MemoryData[]
+  relatedGames?: GameData[]
+}
+
 export interface SubmissionData {
   id: string
   title: string
