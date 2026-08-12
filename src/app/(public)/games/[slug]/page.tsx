@@ -13,8 +13,6 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 import { Separator } from "@/components/ui/separator"
-import { GameCard, type GameData } from "@/components/shared/game-card"
-import { MemoryCard, type MemoryData } from "@/components/shared/memory-card"
 
 // MOCK DATA
 const relatedGames: GameData[] = [
