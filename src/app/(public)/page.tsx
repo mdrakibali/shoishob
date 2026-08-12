@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { Section } from "@/components/ui/section"
 import { HeroSection } from "@/components/features/home/hero-section"
 import { FeaturedStorySection } from "@/components/features/home/featured-story-section"
 import { TimelineSection } from "@/components/features/home/timeline-section"
@@ -20,25 +21,29 @@ export default function HomePage() {
       <RecentMemoriesSection memories={recentMemories} />
       <GamesShowcaseSection games={popularGames} />
       {/* CONTRIBUTION CTA */}
-      <section className="bg-primary text-primary-foreground relative overflow-hidden py-32">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
-        <div className="relative z-10 container mx-auto max-w-4xl px-4 text-center">
-          <h2 className="mb-6 text-4xl leading-tight font-bold md:text-5xl lg:text-6xl">
-            আপনার শৈশবও এখানে রেখে যান
-          </h2>
-          <p className="mx-auto mb-12 max-w-2xl text-xl leading-relaxed opacity-90 md:text-2xl">
-            আপনার কাছে হয়তো এটা শুধু একটা ছোট স্মৃতি। কিন্তু ভবিষ্যৎ প্রজন্মের কাছে সেটাই হতে পারে
-            ইতিহাস।
-          </p>
-          <Button
-            size="lg"
-            asChild
-            className="bg-background text-primary hover:bg-background/90 h-14 rounded-full px-10 text-lg shadow-xl transition-transform duration-300 hover:scale-105"
-          >
-            <Link href="/submit">স্মৃতি যোগ করুন</Link>
-          </Button>
+      <Section className="py-24">
+        <div className="bg-primary text-primary-foreground relative overflow-hidden rounded-3xl px-6 py-20 text-center md:px-12 md:py-24">
+          <div className="relative z-10 mx-auto max-w-3xl">
+            <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+              আপনার শৈশবও এখানে রেখে যান
+            </h2>
+            <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed opacity-90 md:text-xl">
+              আপনার কাছে হয়তো এটা শুধু একটা ছোট স্মৃতি। কিন্তু ভবিষ্যৎ প্রজন্মের কাছে সেটাই হতে পারে
+              ইতিহাস। আজই আপনার গল্পটি আমাদের সাথে শেয়ার করুন।
+            </p>
+            <Button
+              size="lg"
+              asChild
+              className="bg-background text-primary hover:bg-background/90 h-14 rounded-full px-10 text-lg shadow-lg transition-transform duration-300 hover:scale-105"
+            >
+              <Link href="/submit">স্মৃতি যোগ করুন</Link>
+            </Button>
+          </div>
+          {/* Subtle background decoration */}
+          <div className="bg-primary-foreground/10 absolute -top-24 -left-24 h-96 w-96 rounded-full blur-3xl"></div>
+          <div className="bg-primary-foreground/10 absolute -right-24 -bottom-24 h-96 w-96 rounded-full blur-3xl"></div>
         </div>
-      </section>
+      </Section>
     </div>
   )
 }

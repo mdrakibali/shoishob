@@ -1,42 +1,48 @@
 import Link from "next/link"
-
-import { Button } from "@/components/ui/button"
 import { MemoryCard } from "@/components/shared/memory-card"
-import { RecentMemoriesSectionProps } from "@/types"
+import { type MemoryData } from "@/types"
+import { Section, SectionHeader } from "@/components/ui/section"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+import { Button } from "@/components/ui/button"
 
-export function RecentMemoriesSection({ memories }: RecentMemoriesSectionProps) {
+export function RecentMemoriesSection({ memories }: { memories: MemoryData[] }) {
   return (
-    <section className="bg-background py-16">
-      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="border-border mb-8 flex flex-col justify-between gap-4 border-b pb-4 md:flex-row md:items-end">
-          <div>
-            <h2 className="text-foreground text-3xl font-bold md:text-4xl">
-              সাম্প্রতিক স্মৃতি
-            </h2>
-            <p className="text-muted-foreground mt-2 text-lg">
-              আমাদের আর্কাইভের নতুন যুক্ত হওয়া স্মৃতিগুলো পড়ুন
-            </p>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {memories.map((memory) => (
-            <MemoryCard key={memory.id} memory={memory} />
-          ))}
-        </div>
-        
-        <div className="mt-12 flex justify-center">
-          <Button
-            variant="ghost"
-            asChild
-            className="text-foreground hover:text-foreground hover:bg-muted"
-          >
-            <Link href="/explore">
-              সব স্মৃতি দেখুন
-            </Link>
+    <Section className="bg-background">
+      <SectionHeader 
+        title="সাম্প্রতিক স্মৃতি"
+        description="আমাদের আর্কাইভের নতুন যুক্ত হওয়া স্মৃতিগুলো পড়ুন"
+        action={
+          <Button variant="outline" asChild className="shrink-0">
+            <Link href="/explore">সব স্মৃতি দেখুন</Link>
           </Button>
+        }
+      />
+
+      <Carousel
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+        className="w-full"
+      >
+        <CarouselContent className="-ml-4 md:-ml-6">
+          {memories.map((memory) => (
+            <CarouselItem key={memory.id} className="pl-4 md:basis-1/2 md:pl-6 lg:basis-1/3">
+              <MemoryCard memory={memory} />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <div className="mt-8 flex justify-end gap-2 pr-4">
+          <CarouselPrevious className="static translate-y-0" />
+          <CarouselNext className="static translate-y-0" />
         </div>
-      </div>
-    </section>
+      </Carousel>
+    </Section>
   )
 }
