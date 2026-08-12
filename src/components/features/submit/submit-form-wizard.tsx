@@ -1,9 +1,9 @@
 "use client"
 import * as React from "react"
-import { StepTypeSelection } from "./step-type-selection"
+import { StepTypeSelection } from "@/components/features/submit/step-type-selection"
 import { SubmissionType } from "@/types"
-import { StepForm } from "./step-form"
-import { StepSuccess } from "./step-success"
+import { StepForm } from "@/components/features/submit/step-form"
+import { StepSuccess } from "@/components/features/submit/step-success"
 
 export function SubmitFormWizard() {
   const [step, setStep] = React.useState<"type" | "form" | "submitting" | "success">("type")

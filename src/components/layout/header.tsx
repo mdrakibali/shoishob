@@ -6,9 +6,9 @@ import * as React from "react"
 
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogTrigger } from "@/components/ui/dialog"
-import { ThemeToggle } from "./theme-toggle"
-import { LoginDialog } from "./login-dialog"
-import { MobileMenu } from "./mobile-menu"
+import { ThemeToggle } from "@/components/layout/theme-toggle"
+import { LoginDialog } from "@/components/layout/login-dialog"
+import { MobileMenu } from "@/components/layout/mobile-menu"
 
 const navigation = [
   { name: "Home", href: "/" },

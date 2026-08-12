@@ -1,15 +1,8 @@
 import { ChevronRight } from "lucide-react"
-import { SubmissionType } from "./step-type-selection"
-import { StepFormFields } from "./step-form-fields"
-import { StepFormMetadata } from "./step-form-metadata"
-import { StepFormFooter } from "./step-form-footer"
-
-interface StepFormProps {
-  type: SubmissionType
-  onBack: () => void
-  onSubmit: (e: React.FormEvent) => void
-  isSubmitting?: boolean
-}
+import { StepFormFields } from "@/components/features/submit/step-form-fields"
+import { StepFormMetadata } from "@/components/features/submit/step-form-metadata"
+import { StepFormFooter } from "@/components/features/submit/step-form-footer"
+import { StepFormProps } from "@/types"
 
 export function StepForm({ type, onBack, onSubmit, isSubmitting = false }: StepFormProps) {
   return (

@@ -1,11 +1,8 @@
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { SubmissionType } from "./step-type-selection"
 
-interface StepFormFieldsProps {
-  type: SubmissionType
-}
+import { StepFormFieldsProps } from "@/types"
 
 export function StepFormFields({ type }: StepFormFieldsProps) {
   return (

@@ -11,7 +11,7 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import { MOCK_SUBMISSIONS } from "@/lib/mock-data"
-import { ReviewDialog } from "./review-dialog"
+import { ReviewDialog } from "@/components/features/admin/submissions/review-dialog"
 import { SubmissionData } from "@/types"
 
 export function SubmissionsTable() {

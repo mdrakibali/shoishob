@@ -1,12 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { CheckCircle2 } from "lucide-react"
 import Link from "next/link"
-
-interface StepSuccessProps {
-  status: "submitting" | "success"
-  onReset: () => void
-}
-
+import { StepSuccessProps } from "@/types"
 export function StepSuccess({ status, onReset }: StepSuccessProps) {
   return (
     <div className="animate-in fade-in zoom-in-95 bg-surface border-border mx-auto mt-12 max-w-xl rounded-2xl border p-10 text-center shadow-sm duration-500 md:p-16">

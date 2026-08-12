@@ -35,6 +35,7 @@ export interface StepFormFooterProps {
 
 // Defines the props for the StepSuccess component
 export interface StepSuccessProps {
+  status: "submitting" | "success"
   onReset: () => void
 }
 

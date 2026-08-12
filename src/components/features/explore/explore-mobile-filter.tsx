@@ -10,7 +10,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { Filter } from "lucide-react"
-import { ExploreFilters } from "./explore-filters"
+import { ExploreFilters } from "@/components/features/explore/explore-filters"
 
 export function ExploreMobileFilter() {
   return (

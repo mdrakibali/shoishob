@@ -8,16 +8,11 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-import { SubmissionData } from "@/types"
+
 import { Check } from "lucide-react"
 import * as React from "react"
-import { RejectDialog } from "./reject-dialog"
-
-interface ReviewDialogProps {
-  submission: SubmissionData
-  trigger: React.ReactElement
-  onUpdateStatus: (id: string, newStatus: SubmissionData["status"]) => void
-}
+import { RejectDialog } from "@/components/features/admin/submissions/reject-dialog"
+import { ReviewDialogProps } from "@/types"
 
 export function ReviewDialog({ submission: sub, trigger, onUpdateStatus }: ReviewDialogProps) {
   const [isOpen, setIsOpen] = React.useState(false)

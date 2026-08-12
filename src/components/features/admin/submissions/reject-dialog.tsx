@@ -9,14 +9,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { X } from "lucide-react"
-
-interface RejectDialogProps {
-  isOpen: boolean
-  onOpenChange: (open: boolean) => void
-  onReject: () => void
-  isRejecting: boolean
-  disabled?: boolean
-}
+import { RejectDialogProps } from "@/types"
 
 export function RejectDialog({
   isOpen,
