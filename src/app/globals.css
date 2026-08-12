@@ -1,26 +1,125 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  /* LIGHT MODE - Warm Archive */
+  --background: #F7F4EE;
+  --foreground: #292722;
+  
+  --card: #FFFDF8;
+  --card-foreground: #292722;
+  
+  --popover: #FFFDF8;
+  --popover-foreground: #292722;
+  
+  --primary: #8B5E3C;
+  --primary-foreground: #FFFDF8;
+  --primary-hover: #70472C;
+  
+  --secondary: #E5E0D6;
+  --secondary-foreground: #292722;
+  
+  --muted: #E5E0D6;
+  --muted-foreground: #706C63;
+  
+  --accent: #D49A4A;
+  --accent-foreground: #FFFDF8;
+  
+  --success: #58745A;
+  --success-foreground: #FFFDF8;
+  
+  --destructive: #A85C55;
+  --destructive-foreground: #FFFDF8;
+  
+  --border: #E5E0D6;
+  --input: #E5E0D6;
+  --ring: #8B5E3C;
+  
+  --radius: 0.5rem;
+}
+
+.dark {
+  /* DARK MODE - Warm Archive */
+  --background: #171614;
+  --foreground: #F3EFE7;
+  
+  --card: #211F1B;
+  --card-foreground: #F3EFE7;
+  
+  --popover: #211F1B;
+  --popover-foreground: #F3EFE7;
+  
+  --primary: #C58A5A;
+  --primary-foreground: #171614;
+  --primary-hover: #D49A6A;
+  
+  --secondary: #39352F;
+  --secondary-foreground: #F3EFE7;
+  
+  --muted: #292620;
+  --muted-foreground: #B8B1A5;
+  
+  --accent: #D7A65D;
+  --accent-foreground: #171614;
+  
+  --success: #78927A;
+  --success-foreground: #171614;
+  
+  --destructive: #A85C55;
+  --destructive-foreground: #F3EFE7;
+  
+  --border: #39352F;
+  --input: #39352F;
+  --ring: #C58A5A;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
 }
