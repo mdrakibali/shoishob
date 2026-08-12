@@ -4,10 +4,7 @@ import { Menu, User } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { usePathname } from "next/navigation"
-
-interface MobileMenuProps {
-  navigation: { name: string; href: string }[]
-}
+import { MobileMenuProps } from "@/types"
 
 export function MobileMenu({ navigation }: MobileMenuProps) {
   const pathname = usePathname()

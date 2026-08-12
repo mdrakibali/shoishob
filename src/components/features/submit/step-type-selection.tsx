@@ -1,10 +1,5 @@
 import { Joystick, Image as ImageIcon, MapPin } from "lucide-react"
-
-export type SubmissionType = "game" | "memory" | "place" | null
-
-interface StepTypeSelectionProps {
-  onSelectType: (type: SubmissionType) => void
-}
+import { StepTypeSelectionProps } from "@/types"
 
 export function StepTypeSelection({ onSelectType }: StepTypeSelectionProps) {
   return (

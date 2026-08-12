@@ -2,11 +2,7 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { MemoryCard } from "@/components/shared/memory-card"
-import { type MemoryData } from "@/types"
-
-interface RecentMemoriesSectionProps {
-  memories: MemoryData[]
-}
+import { RecentMemoriesSectionProps } from "@/types"
 
 export function RecentMemoriesSection({ memories }: RecentMemoriesSectionProps) {
   return (

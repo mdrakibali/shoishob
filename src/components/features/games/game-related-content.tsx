@@ -1,12 +1,6 @@
 import { MemoryCard } from "@/components/shared/memory-card"
-import { type MemoryData } from "@/types"
 import { GameCard } from "@/components/shared/game-card"
-import { type GameData } from "@/types"
-
-interface GameRelatedContentProps {
-  memories: MemoryData[]
-  relatedGames: GameData[]
-}
+import { GameRelatedContentProps } from "@/types"
 
 export function GameRelatedContent({ memories, relatedGames }: GameRelatedContentProps) {
   return (

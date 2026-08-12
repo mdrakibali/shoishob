@@ -1,6 +1,7 @@
 "use client"
 import * as React from "react"
-import { StepTypeSelection, SubmissionType } from "./step-type-selection"
+import { StepTypeSelection } from "./step-type-selection"
+import { SubmissionType } from "@/types"
 import { StepForm } from "./step-form"
 import { StepSuccess } from "./step-success"
 

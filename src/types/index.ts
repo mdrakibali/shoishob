@@ -45,3 +45,4 @@ export interface SubmissionData {
   status: "Pending" | "Approved" | "Rejected"
   created: string
 }
+export * from "./components"
