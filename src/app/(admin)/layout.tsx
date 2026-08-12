@@ -20,7 +20,7 @@ export default function AdminLayout({
       <main className="flex min-h-screen flex-1 flex-col overflow-hidden">
         {/* Admin Header / Topbar could go here if needed */}
         <div className="bg-surface flex-1 overflow-y-auto p-8">
-          <div className="mx-auto max-w-6xl">{children}</div>
+          <div className="mx-auto max-w-7xl">{children}</div>
         </div>
       </main>
     </div>

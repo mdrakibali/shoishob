@@ -1,4 +1,4 @@
-import * as React from "react"
+import { GamesFilter } from "@/components/features/games/games-filter"
 import { GameCard } from "@/components/shared/game-card"
 import { type GameData } from "@/types"
 
@@ -63,22 +63,57 @@ const allGames: GameData[] = [
   },
 ]
 
-export default function GamesPage() {
+export default async function GamesPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}) {
+  const resolvedParams = await searchParams
+  // Basic simulation of filtering logic
+  const filteredGames = allGames
+  if (resolvedParams.players) {
+    // In a real app, we'd properly match these
+  }
+
   return (
-    <div className="container mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-      <div className="mx-auto mb-16 max-w-3xl text-center">
-        <h1 className="text-foreground mb-6 font-serif text-4xl font-bold md:text-5xl">
+    <div className="container mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mb-12">
+        <h1 className="text-foreground mb-4 font-serif text-3xl font-bold md:text-5xl">
           হারিয়ে যাওয়া খেলাগুলো
         </h1>
-        <p className="text-muted-foreground text-xl">
+        <p className="text-muted-foreground text-lg md:text-xl max-w-3xl">
           যে খেলাগুলো আমাদের বিকেলগুলোকে ভরে রাখত। চলুন, ফিরে যাই সেই ধুলোমাখা মাঠে।
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {allGames.map((game) => (
-          <GameCard key={game.id} game={game} />
-        ))}
+      <div className="flex flex-col gap-8 md:flex-row">
+        {/* Sidebar Filters */}
+        <div className="w-full md:w-64 shrink-0">
+          <div className="bg-card border-border sticky top-24 rounded-lg border p-6 shadow-sm">
+            <GamesFilter />
+          </div>
+        </div>
+
+        {/* Games Grid */}
+        <div className="flex-1">
+          <div className="mb-6 flex items-center justify-between">
+            <p className="text-muted-foreground text-sm font-medium">
+              {filteredGames.length} টি খেলা পাওয়া গেছে
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {filteredGames.map((game) => (
+              <GameCard key={game.id} game={game} />
+            ))}
+          </div>
+          
+          {filteredGames.length === 0 && (
+            <div className="border-border bg-card flex flex-col items-center justify-center rounded-lg border border-dashed py-24 text-center">
+              <p className="text-muted-foreground">কোনো খেলা পাওয়া যায়নি।</p>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   )

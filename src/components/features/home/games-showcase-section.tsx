@@ -7,7 +7,7 @@ import { GamesShowcaseSectionProps } from "@/types"
 export function GamesShowcaseSection({ games }: GamesShowcaseSectionProps) {
   return (
     <section className="bg-background py-16">
-      <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="border-border mb-8 flex flex-col justify-between gap-4 border-b pb-4 md:flex-row md:items-end">
           <div>
             <h2 className="text-foreground font-serif text-3xl font-bold md:text-4xl">

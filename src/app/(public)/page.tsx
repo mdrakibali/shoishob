@@ -1,7 +1,9 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { HeroSection } from "@/components/features/home/hero-section"
+import { FeaturedStorySection } from "@/components/features/home/featured-story-section"
 import { TimelineSection } from "@/components/features/home/timeline-section"
+import { StatsSection } from "@/components/features/home/stats-section"
 import { RecentMemoriesSection } from "@/components/features/home/recent-memories-section"
 import { GamesShowcaseSection } from "@/components/features/home/games-showcase-section"
 import { MOCK_MEMORIES, MOCK_GAMES } from "@/lib/mock-data"
@@ -12,7 +14,9 @@ export default function HomePage() {
   return (
     <div className="flex w-full flex-col">
       <HeroSection />
+      <FeaturedStorySection />
       <TimelineSection />
+      <StatsSection />
       <RecentMemoriesSection memories={recentMemories} />
       <GamesShowcaseSection games={popularGames} />
       {/* CONTRIBUTION CTA */}

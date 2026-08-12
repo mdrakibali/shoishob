@@ -55,7 +55,7 @@ export default async function ExplorePage(props: {
   })
 
   return (
-    <div className="container mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+    <div className="container mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
       <div className="mb-8 md:mb-12">
         <h1 className="text-foreground mb-4 font-serif text-3xl font-bold md:text-5xl">
           শৈশব আবিষ্কার করুন
