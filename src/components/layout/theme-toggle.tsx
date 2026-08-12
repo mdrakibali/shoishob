@@ -1,5 +1,5 @@
 "use client"
-import * as React from "react"
+import { useEffect, useState } from "react"
 import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 
@@ -12,7 +12,25 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 export function ThemeToggle() {
+  const [mounted, setMounted] = useState(false)
   const { setTheme } = useTheme()
+
+  // Avoid hydration mismatch by rendering only after component is mounted
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return (
+      <Button
+        variant="ghost"
+        size="icon"
+        className="text-secondary-foreground hover:bg-secondary/50"
+      >
+        <Sun className="h-[1.2rem] w-[1.2rem]" />
+      </Button>
+    )
+  }
 
   return (
     <DropdownMenu>

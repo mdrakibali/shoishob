@@ -10,15 +10,15 @@ import {
 } from "@/components/ui/dialog"
 
 import { Check } from "lucide-react"
-import * as React from "react"
+import { useState } from "react"
 import { RejectDialog } from "@/components/features/admin/submissions/reject-dialog"
 import { ReviewDialogProps } from "@/types"
 
 export function ReviewDialog({ submission: sub, trigger, onUpdateStatus }: ReviewDialogProps) {
-  const [isOpen, setIsOpen] = React.useState(false)
-  const [rejectDialogOpen, setRejectDialogOpen] = React.useState(false)
-  const [isApproving, setIsApproving] = React.useState(false)
-  const [isRejecting, setIsRejecting] = React.useState(false)
+  const [isOpen, setIsOpen] = useState(false)
+  const [rejectDialogOpen, setRejectDialogOpen] = useState(false)
+  const [isApproving, setIsApproving] = useState(false)
+  const [isRejecting, setIsRejecting] = useState(false)
 
   const handleApprove = () => {
     setIsApproving(true)

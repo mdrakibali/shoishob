@@ -2,7 +2,6 @@
 import { Search } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import * as React from "react"
 
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogTrigger } from "@/components/ui/dialog"

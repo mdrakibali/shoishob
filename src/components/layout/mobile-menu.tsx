@@ -1,4 +1,4 @@
-import * as React from "react"
+import { useState } from "react"
 import Link from "next/link"
 import { Menu, User } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -8,7 +8,7 @@ import { MobileMenuProps } from "@/types"
 
 export function MobileMenu({ navigation }: MobileMenuProps) {
   const pathname = usePathname()
-  const [isOpen, setIsOpen] = React.useState(false)
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
