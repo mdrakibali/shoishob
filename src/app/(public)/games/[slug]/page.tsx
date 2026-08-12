@@ -1,8 +1,10 @@
 import * as React from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ChevronRight, Clock, Users, ArrowRight, Share2, Info } from "lucide-react"
+import { Share2, Users, Clock, Info } from "lucide-react"
 
+import { GameCard } from "@/components/shared/game-card"
+import { MemoryCard } from "@/components/shared/memory-card"
 import { Button } from "@/components/ui/button"
 import {
   Breadcrumb,

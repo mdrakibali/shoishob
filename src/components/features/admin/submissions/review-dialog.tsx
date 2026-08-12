@@ -10,9 +10,10 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
+import { SubmissionData } from "@/types"
 
 interface ReviewDialogProps {
-  submission: any
+  submission: SubmissionData
   trigger: React.ReactNode
 }
 

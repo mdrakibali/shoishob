@@ -70,10 +70,10 @@ export default function HomePage() {
                 <Sparkles className="mr-2 h-4 w-4" />
                 ডিজিটাল আর্কাইভ
               </div>
-              <h1 className="text-foreground mb-6 font-serif text-5xl leading-[1.1] font-bold tracking-tight sm:text-6xl md:text-7xl">
+              <h1 className="text-foreground mb-6  text-5xl leading-[1.1] font-bold tracking-tight sm:text-6xl md:text-7xl">
                 আমাদের <span className="text-primary">শৈশব</span>
               </h1>
-              <p className="text-secondary-foreground mb-4 font-serif text-xl font-medium md:text-2xl">
+              <p className="text-secondary-foreground mb-4  text-xl font-medium md:text-2xl">
                 "যা আজ স্মৃতি, তা কাল ইতিহাস।"
               </p>
               <p className="text-muted-foreground mb-10 max-w-lg text-base leading-relaxed md:text-lg">
@@ -118,7 +118,7 @@ export default function HomePage() {
       <section className="bg-surface border-border border-y py-20">
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
-            <h2 className="text-foreground mb-4 font-serif text-3xl font-bold md:text-4xl">
+            <h2 className="text-foreground mb-4  text-3xl font-bold md:text-4xl">
               কোন সময়ের শৈশব দেখতে চান?
             </h2>
             <p className="text-muted-foreground">আপনার প্রিয় দশক বেছে নিন</p>
@@ -148,7 +148,7 @@ export default function HomePage() {
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end">
             <div>
-              <h2 className="text-foreground mb-3 font-serif text-3xl font-bold md:text-4xl">
+              <h2 className="text-foreground mb-3  text-3xl font-bold md:text-4xl">
                 সম্প্রতি সংরক্ষিত স্মৃতি
               </h2>
               <p className="text-muted-foreground text-lg">অন্যদের ফেলে আসা দিনের গল্পগুলো পড়ুন।</p>
@@ -179,7 +179,7 @@ export default function HomePage() {
         <div className="relative z-10 container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end">
             <div className="max-w-2xl">
-              <h2 className="text-foreground mb-3 font-serif text-3xl font-bold md:text-4xl">
+              <h2 className="text-foreground mb-3  text-3xl font-bold md:text-4xl">
                 হারিয়ে যাওয়া খেলাগুলো
               </h2>
               <p className="text-muted-foreground text-lg">
@@ -208,7 +208,7 @@ export default function HomePage() {
               <div className="bg-secondary mb-4 flex h-16 w-16 items-center justify-center rounded-full">
                 <Sparkles className="text-primary h-8 w-8" />
               </div>
-              <h3 className="text-foreground mb-2 font-serif text-xl font-bold">
+              <h3 className="text-foreground mb-2  text-xl font-bold">
                 আপনার এলাকার খেলা যোগ করুন
               </h3>
               <p className="text-muted-foreground mb-6 max-w-sm">
@@ -230,7 +230,7 @@ export default function HomePage() {
       <section className="bg-primary text-primary-foreground relative overflow-hidden py-32">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
         <div className="relative z-10 container mx-auto max-w-4xl px-4 text-center">
-          <h2 className="mb-6 font-serif text-4xl leading-tight font-bold md:text-5xl lg:text-6xl">
+          <h2 className="mb-6  text-4xl leading-tight font-bold md:text-5xl lg:text-6xl">
             আপনার শৈশবও এখানে রেখে যান
           </h2>
           <p className="mx-auto mb-12 max-w-2xl text-xl leading-relaxed opacity-90 md:text-2xl">

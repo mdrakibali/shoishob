@@ -1,5 +1,3 @@
-// Type definitions for Shoishob frontend
-
 // Defines the structure of a memory entry
 export interface MemoryData {
   id: string
