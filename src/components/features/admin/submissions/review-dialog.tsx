@@ -1,5 +1,4 @@
 "use client"
-import { AlertTriangle, Check, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
   Dialog,
@@ -11,15 +10,42 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { SubmissionData } from "@/types"
+import { Check, X } from "lucide-react"
+import * as React from "react"
 
 interface ReviewDialogProps {
   submission: SubmissionData
   trigger: React.ReactNode
+  onUpdateStatus: (id: string, newStatus: SubmissionData["status"]) => void
 }
 
-export function ReviewDialog({ submission: sub, trigger }: ReviewDialogProps) {
+export function ReviewDialog({ submission: sub, trigger, onUpdateStatus }: ReviewDialogProps) {
+  const [isOpen, setIsOpen] = React.useState(false)
+  const [rejectDialogOpen, setRejectDialogOpen] = React.useState(false)
+  const [isApproving, setIsApproving] = React.useState(false)
+  const [isRejecting, setIsRejecting] = React.useState(false)
+
+  const handleApprove = () => {
+    setIsApproving(true)
+    setTimeout(() => {
+      onUpdateStatus(sub.id, "Approved")
+      setIsApproving(false)
+      setIsOpen(false)
+    }, 1500)
+  }
+
+  const handleReject = () => {
+    setIsRejecting(true)
+    setTimeout(() => {
+      onUpdateStatus(sub.id, "Rejected")
+      setIsRejecting(false)
+      setRejectDialogOpen(false)
+      setIsOpen(false)
+    }, 1500)
+  }
+
   return (
-    <Dialog>
+    <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
       <DialogContent className="border-border flex max-h-[90vh] max-w-4xl flex-col overflow-hidden p-0">
         <DialogHeader className="border-border border-b p-6">
@@ -59,14 +85,20 @@ export function ReviewDialog({ submission: sub, trigger }: ReviewDialogProps) {
             </div>
 
             <div className="space-y-3">
-              <Button className="bg-success hover:bg-success/90 w-full justify-start text-white">
-                <Check className="mr-2 h-4 w-4" /> Approve & Publish
+              <Button
+                onClick={handleApprove}
+                disabled={isApproving || sub.status !== "Pending"}
+                className="bg-success hover:bg-success/90 w-full justify-start text-white"
+              >
+                <Check className="mr-2 h-4 w-4" />
+                {isApproving ? "Approving..." : "Approve & Publish"}
               </Button>
 
-              <Dialog>
+              <Dialog open={rejectDialogOpen} onOpenChange={setRejectDialogOpen}>
                 <DialogTrigger asChild>
                   <Button
                     variant="outline"
+                    disabled={isApproving || sub.status !== "Pending"}
                     className="text-destructive hover:text-destructive hover:bg-destructive/10 border-destructive/50 w-full justify-start"
                   >
                     <X className="mr-2 h-4 w-4" /> Reject
@@ -94,14 +126,26 @@ export function ReviewDialog({ submission: sub, trigger }: ReviewDialogProps) {
                     </div>
                   </div>
                   <DialogFooter>
-                    <Button variant="outline">Cancel</Button>
-                    <Button variant="destructive">Confirm Reject</Button>
+                    <Button
+                      variant="outline"
+                      onClick={() => setRejectDialogOpen(false)}
+                      disabled={isRejecting}
+                    >
+                      Cancel
+                    </Button>
+                    <Button variant="destructive" onClick={handleReject} disabled={isRejecting}>
+                      {isRejecting ? "Rejecting..." : "Confirm Reject"}
+                    </Button>
                   </DialogFooter>
                 </DialogContent>
               </Dialog>
 
-              <Button variant="outline" className="w-full justify-start">
-                <AlertTriangle className="mr-2 h-4 w-4" /> Request Edit
+              <Button
+                variant="outline"
+                onClick={() => setIsOpen(false)}
+                className="w-full justify-start"
+              >
+                Close
               </Button>
             </div>
           </div>

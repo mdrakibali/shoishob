@@ -1,6 +1,6 @@
-import Link from "next/link"
-import { CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { CheckCircle2 } from "lucide-react"
+import Link from "next/link"
 
 interface StepSuccessProps {
   status: "submitting" | "success"
@@ -10,18 +10,6 @@ interface StepSuccessProps {
 export function StepSuccess({ status, onReset }: StepSuccessProps) {
   return (
     <div className="animate-in fade-in zoom-in-95 bg-surface border-border mx-auto mt-12 max-w-xl rounded-2xl border p-10 text-center shadow-sm duration-500 md:p-16">
-      {status === "submitting" && (
-        <div className="flex flex-col items-center">
-          <div className="border-primary/20 border-t-primary mb-8 h-20 w-20 animate-spin rounded-full border-4"></div>
-          <h2 className="text-foreground mb-4 font-serif text-3xl font-bold">
-            সংরক্ষণ করা হচ্ছে...
-          </h2>
-          <p className="text-secondary-foreground">
-            দয়া করে অপেক্ষা করুন, আপনার স্মৃতিটি আর্কাইভে জমা হচ্ছে।
-          </p>
-        </div>
-      )}
-
       {status === "success" && (
         <div className="flex flex-col items-center">
           <div className="bg-success/10 mb-8 flex h-24 w-24 items-center justify-center rounded-full">

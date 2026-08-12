@@ -14,14 +14,14 @@ export function ExploreSearch() {
 
   const handleSearch = (e?: React.FormEvent) => {
     if (e) e.preventDefault()
-    
+
     const params = new URLSearchParams(searchParams.toString())
     if (query.trim()) {
       params.set("q", query.trim())
     } else {
       params.delete("q")
     }
-    
+
     router.push(`${pathname}?${params.toString()}`)
   }
 
@@ -34,8 +34,8 @@ export function ExploreSearch() {
         placeholder="লাটিম, গোল্লাছুট, ২০০২, গাজীপুর..."
         className="bg-background border-border focus-visible:ring-primary h-14 pl-11 text-base shadow-sm"
       />
-      <Button 
-        type="submit" 
+      <Button
+        type="submit"
         className="bg-primary hover:bg-primary-hover text-primary-foreground absolute right-1.5 h-11"
       >
         খুঁজুন

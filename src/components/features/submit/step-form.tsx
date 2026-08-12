@@ -17,9 +17,10 @@ interface StepFormProps {
   type: SubmissionType
   onBack: () => void
   onSubmit: (e: React.FormEvent) => void
+  isSubmitting?: boolean
 }
 
-export function StepForm({ type, onBack, onSubmit }: StepFormProps) {
+export function StepForm({ type, onBack, onSubmit, isSubmitting = false }: StepFormProps) {
   return (
     <div className="animate-in fade-in slide-in-from-right-8 duration-500">
       <div className="mb-8 flex items-center gap-2">
@@ -73,7 +74,7 @@ export function StepForm({ type, onBack, onSubmit }: StepFormProps) {
               <Textarea
                 id="howToPlay"
                 placeholder="খেলার নিয়ম, কতজন লাগে, কী কী জিনিস লাগে..."
-                className="min-h-[120px] resize-y text-base"
+                className="min-h-30 resize-y text-base"
               />
             </div>
           )}
@@ -182,7 +183,7 @@ export function StepForm({ type, onBack, onSubmit }: StepFormProps) {
                 </p>
               </div>
             </div>
-            <div className="bg-muted border-border flex h-[65px] w-full max-w-[300px] items-center justify-center rounded-sm border p-2">
+            <div className="bg-muted border-border flex h-16.25 w-full max-w-75 items-center justify-center rounded-sm border p-2">
               <div className="flex w-full items-center gap-3">
                 <div className="border-muted-foreground h-6 w-6 rounded-sm border-2"></div>
                 <span className="text-secondary-foreground text-sm font-medium">
@@ -194,9 +195,10 @@ export function StepForm({ type, onBack, onSubmit }: StepFormProps) {
           <Button
             type="submit"
             size="lg"
+            disabled={isSubmitting}
             className="bg-primary hover:bg-primary-hover text-primary-foreground h-14 w-full text-lg"
           >
-            সংরক্ষণ করুন
+            {isSubmitting ? "সংরক্ষণ করা হচ্ছে..." : "সংরক্ষণ করুন"}
           </Button>
         </form>
       </div>

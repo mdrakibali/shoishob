@@ -1,4 +1,5 @@
 "use client"
+import { useState } from "react"
 import { Eye } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
@@ -11,8 +12,17 @@ import {
 } from "@/components/ui/table"
 import { MOCK_SUBMISSIONS } from "@/lib/mock-data"
 import { ReviewDialog } from "./review-dialog"
+import { SubmissionData } from "@/types"
 
 export function SubmissionsTable() {
+  const [submissions, setSubmissions] = useState(MOCK_SUBMISSIONS)
+
+  const handleUpdateStatus = (id: string, newStatus: SubmissionData["status"]) => {
+    setSubmissions((prev) =>
+      prev.map((sub) => (sub.id === id ? { ...sub, status: newStatus } : sub))
+    )
+  }
+
   return (
     <div className="border-border bg-card overflow-hidden rounded-md border">
       <Table>
@@ -27,7 +37,7 @@ export function SubmissionsTable() {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {MOCK_SUBMISSIONS.map((sub) => (
+          {submissions.map((sub) => (
             <TableRow key={sub.id}>
               <TableCell className="font-medium">{sub.title}</TableCell>
               <TableCell>{sub.type}</TableCell>
@@ -51,6 +61,7 @@ export function SubmissionsTable() {
               <TableCell className="text-right">
                 <ReviewDialog
                   submission={sub}
+                  onUpdateStatus={handleUpdateStatus}
                   trigger={
                     <Button variant="ghost" size="sm">
                       <Eye className="mr-2 h-4 w-4" /> Review

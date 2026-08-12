@@ -62,7 +62,7 @@ export function ExploreFilters() {
                     handleFilterChange("decade", decade, checked as boolean)
                   }
                 />
-                <Label htmlFor={`decade-${decade}`} className="font-normal cursor-pointer">
+                <Label htmlFor={`decade-${decade}`} className="cursor-pointer font-normal">
                   {decade}
                 </Label>
               </div>
@@ -82,7 +82,7 @@ export function ExploreFilters() {
                     handleFilterChange("type", type, checked as boolean)
                   }
                 />
-                <Label htmlFor={`type-${type}`} className="font-normal cursor-pointer">
+                <Label htmlFor={`type-${type}`} className="cursor-pointer font-normal">
                   {type}
                 </Label>
               </div>
@@ -102,7 +102,7 @@ export function ExploreFilters() {
                     handleFilterChange("district", district, checked as boolean)
                   }
                 />
-                <Label htmlFor={`dist-${district}`} className="font-normal cursor-pointer">
+                <Label htmlFor={`dist-${district}`} className="cursor-pointer font-normal">
                   {district}
                 </Label>
               </div>

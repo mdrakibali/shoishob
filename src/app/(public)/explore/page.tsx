@@ -10,7 +10,7 @@ export default async function ExplorePage(props: {
 }) {
   const searchParams = await props.searchParams
   const query = searchParams?.q as string | undefined
-  
+
   // Normalize array params
   const getArrayParam = (param: string | string[] | undefined) => {
     if (!param) return []
@@ -31,7 +31,7 @@ export default async function ExplorePage(props: {
     // Decade filter (mock implementation, mapping year to decade roughly if possible)
     if (decades.length > 0) {
       const year = parseInt(memory.year)
-      const isMatch = decades.some(decade => {
+      const isMatch = decades.some((decade) => {
         if (decade === "1990s" && year >= 1990 && year < 2000) return true
         if (decade === "2000s" && year >= 2000 && year < 2010) return true
         if (decade === "2010s" && year >= 2010 && year < 2020) return true
@@ -70,7 +70,7 @@ export default async function ExplorePage(props: {
       <div className="relative mb-8 max-w-2xl">
         <ExploreSearch />
       </div>
-      
+
       <div className="flex flex-col items-start gap-8 md:flex-row">
         {/* DESKTOP FILTERS */}
         <div className="sticky top-24 hidden w-64 shrink-0 md:block">
@@ -81,14 +81,18 @@ export default async function ExplorePage(props: {
 
         {/* MOBILE FILTERS */}
         <div className="border-border flex w-full items-center justify-between border-b pb-4 md:hidden">
-          <p className="text-muted-foreground text-sm">{filteredMemories.length}টি স্মৃতি পাওয়া গেছে</p>
+          <p className="text-muted-foreground text-sm">
+            {filteredMemories.length}টি স্মৃতি পাওয়া গেছে
+          </p>
           <ExploreMobileFilter />
         </div>
 
         {/* RESULTS GRID */}
         <div className="w-full flex-1">
           <div className="mb-6 hidden items-center justify-between md:flex">
-            <p className="text-muted-foreground text-sm font-medium">{filteredMemories.length}টি স্মৃতি পাওয়া গেছে</p>
+            <p className="text-muted-foreground text-sm font-medium">
+              {filteredMemories.length}টি স্মৃতি পাওয়া গেছে
+            </p>
           </div>
 
           {filteredMemories.length > 0 ? (
@@ -99,8 +103,10 @@ export default async function ExplorePage(props: {
             </div>
           ) : (
             <div className="py-20 text-center">
-              <h3 className="text-xl font-medium mb-2 text-foreground">কোনো স্মৃতি পাওয়া যায়নি</h3>
-              <p className="text-muted-foreground">আপনার খোঁজার সাথে মিলে যায় এমন কোনো স্মৃতি নেই। ফিল্টার পরিবর্তন করে দেখতে পারেন।</p>
+              <h3 className="text-foreground mb-2 text-xl font-medium">কোনো স্মৃতি পাওয়া যায়নি</h3>
+              <p className="text-muted-foreground">
+                আপনার খোঁজার সাথে মিলে যায় এমন কোনো স্মৃতি নেই। ফিল্টার পরিবর্তন করে দেখতে পারেন।
+              </p>
             </div>
           )}
 

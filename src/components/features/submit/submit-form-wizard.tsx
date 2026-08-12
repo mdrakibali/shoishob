@@ -31,12 +31,15 @@ export function SubmitFormWizard() {
   return (
     <>
       {step === "type" && <StepTypeSelection onSelectType={handleSelectType} />}
-      {step === "form" && (
-        <StepForm type={type} onBack={() => setStep("type")} onSubmit={handleSubmit} />
+      {(step === "form" || step === "submitting") && (
+        <StepForm
+          type={type}
+          onBack={() => setStep("type")}
+          onSubmit={handleSubmit}
+          isSubmitting={step === "submitting"}
+        />
       )}
-      {(step === "submitting" || step === "success") && (
-        <StepSuccess status={step} onReset={handleReset} />
-      )}
+      {step === "success" && <StepSuccess status={step} onReset={handleReset} />}
     </>
   )
 }

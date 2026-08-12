@@ -1,14 +1,21 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
 import { Filter } from "lucide-react"
 import { ExploreFilters } from "./explore-filters"
 
 export function ExploreMobileFilter() {
   return (
     <Sheet>
-      <SheetTrigger 
+      <SheetTrigger
         render={
           <Button variant="outline" size="sm" className="bg-background">
             <Filter className="mr-2 h-4 w-4" />
@@ -22,7 +29,7 @@ export function ExploreMobileFilter() {
         </SheetHeader>
         <ExploreFilters />
         <div className="mt-8">
-          <SheetClose 
+          <SheetClose
             render={
               <Button className="bg-primary text-primary-foreground hover:bg-primary-hover w-full">
                 ফলাফল দেখুন
