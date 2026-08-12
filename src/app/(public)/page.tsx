@@ -1,13 +1,13 @@
-import { HeroSection } from "@/components/features/home/hero-section"
-import { FeaturedStorySection } from "@/components/features/home/featured-story-section"
-import { StatsSection } from "@/components/features/home/stats-section"
 import { CtaSection } from "@/components/features/home/cta-section"
-import { RecentMemoriesSection } from "@/components/features/home/recent-memories-section"
+import { FeaturedStorySection } from "@/components/features/home/featured-story-section"
 import { GamesShowcaseSection } from "@/components/features/home/games-showcase-section"
-import { MOCK_ARCHIVES } from "@/lib/mock-data"
+import { HeroSection } from "@/components/features/home/hero-section"
+import { RecentMemoriesSection } from "@/components/features/home/recent-memories-section"
+import { StatsSection } from "@/components/features/home/stats-section"
+import { MOCK_MEMORIES, MOCK_GAMES } from "@/lib/mock-data"
 
-const recentMemories = MOCK_ARCHIVES.filter(item => item.category === "memories").slice(0, 6)
-const popularGames = MOCK_ARCHIVES.filter(item => item.category === "games").slice(0, 6)
+const recentMemories = MOCK_MEMORIES.slice(0, 6)
+const popularGames = MOCK_GAMES.slice(0, 6)
 
 export default function HomePage() {
   return (

@@ -36,7 +36,7 @@ export function MemoriesFilters() {
   }
 
   return (
-    <div>
+    <div className="rounded-xl border bg-card text-card-foreground p-6 shadow-sm">
       <div className="mb-4 flex items-center justify-between">
         <h2 className="text-lg font-bold">ফিল্টার</h2>
         <Button

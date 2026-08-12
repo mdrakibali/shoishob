@@ -37,8 +37,7 @@ export function RecentMemoriesSection({ memories = [] }: RecentMemoriesSectionPr
         <CarouselContent className="-ml-4 md:-ml-6">
           {memories.map((memory) => (
             <CarouselItem key={memory.id} className="pl-4 md:basis-1/2 md:pl-6 lg:basis-1/3">
-              <MemoryCard memory={memory} />
-te            </CarouselItem>
+              <MemoryCard memory={memory} />       </CarouselItem>
           ))}
         </CarouselContent>
         <div className="mt-8 flex justify-end gap-2 pr-4">
