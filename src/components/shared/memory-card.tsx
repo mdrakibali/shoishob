@@ -1,10 +1,10 @@
-import { Calendar, MapPin } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
 import { MemoryCardProps } from "@/types"
+import { Calendar, MapPin } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
 
 // MemoryCard displays a single memory entry in a grid or list
 export function MemoryCard({ memory, className }: MemoryCardProps) {
@@ -17,7 +17,7 @@ export function MemoryCard({ memory, className }: MemoryCardProps) {
           className
         )}
       >
-        <div className="bg-muted relative aspect-[4/3] w-full overflow-hidden">
+        <div className="bg-muted relative aspect-4/3 w-full overflow-hidden">
           <Image
             src={memory.imageUrl}
             alt={memory.title}

@@ -1,5 +1,6 @@
 import * as React from "react"
-import { GameCard, type GameData } from "@/components/shared/game-card"
+import { GameCard } from "@/components/shared/game-card";
+import { type GameData } from "@/types"
 
 const allGames: GameData[] = [
   {

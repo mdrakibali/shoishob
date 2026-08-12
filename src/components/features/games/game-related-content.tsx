@@ -1,5 +1,7 @@
-import { MemoryCard, type MemoryData } from "@/components/shared/memory-card"
-import { GameCard, type GameData } from "@/components/shared/game-card"
+import { MemoryCard } from "@/components/shared/memory-card";
+import { type MemoryData } from "@/types"
+import { GameCard } from "@/components/shared/game-card";
+import { type GameData } from "@/types"
 
 interface GameRelatedContentProps {
   memories: MemoryData[]

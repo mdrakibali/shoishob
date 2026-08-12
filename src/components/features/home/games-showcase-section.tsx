@@ -1,7 +1,8 @@
 import Link from "next/link"
 import { ArrowRight, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { GameCard, type GameData } from "@/components/shared/game-card"
+import { GameCard } from "@/components/shared/game-card";
+import { type GameData } from "@/types"
 
 interface GamesShowcaseSectionProps {
   games: GameData[]

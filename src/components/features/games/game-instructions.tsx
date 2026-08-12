@@ -1,5 +1,5 @@
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export function GameInstructions() {
   return (
@@ -27,7 +27,7 @@ export function GameInstructions() {
 
       <div className="not-prose my-8 space-y-6">
         <div className="flex gap-4">
-          <div className="bg-primary text-primary-foreground flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl font-serif text-xl font-bold shadow-sm">
+          <div className="bg-primary text-primary-foreground flex h-12 w-12 shrink-0 items-center justify-center rounded-xl font-serif text-xl font-bold shadow-sm">
             01
           </div>
           <div>
@@ -40,7 +40,7 @@ export function GameInstructions() {
         </div>
 
         <div className="flex gap-4">
-          <div className="bg-primary text-primary-foreground flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl font-serif text-xl font-bold shadow-sm">
+          <div className="bg-primary text-primary-foreground flex h-12 w-12 shrink-0 items-center justify-center rounded-xl font-serif text-xl font-bold shadow-sm">
             02
           </div>
           <div>

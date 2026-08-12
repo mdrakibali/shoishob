@@ -1,6 +1,7 @@
 import * as React from "react"
 import Image from "next/image"
-import { MemoryCard, type MemoryData } from "@/components/shared/memory-card"
+import { MemoryCard } from "@/components/shared/memory-card";
+import { type MemoryData } from "@/types"
 import { MemoryDetailHeader } from "@/components/features/memories/memory-detail-header"
 import { MemoryContent } from "@/components/features/memories/memory-content"
 
