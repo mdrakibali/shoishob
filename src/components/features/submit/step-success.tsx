@@ -10,7 +10,7 @@ export function StepSuccess({ status, onReset }: StepSuccessProps) {
           <div className="bg-success/10 mb-8 flex h-24 w-24 items-center justify-center rounded-full">
             <CheckCircle2 className="text-success h-12 w-12" />
           </div>
-          <h2 className="text-foreground mb-4 font-serif text-3xl font-bold md:text-4xl">
+          <h2 className="text-foreground mb-4 text-3xl font-bold md:text-4xl">
             আপনার স্মৃতি সংরক্ষণের পথে!
           </h2>
           <p className="text-secondary-foreground mb-8 text-lg">

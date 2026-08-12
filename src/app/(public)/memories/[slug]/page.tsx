@@ -27,7 +27,7 @@ export default function MemoryDetailPage() {
         <MemoryContent />
 
         <div className="mt-20">
-          <h2 className="text-foreground mb-8 font-serif text-3xl font-bold">এমন আরও স্মৃতি</h2>
+          <h2 className="text-foreground mb-8 text-3xl font-bold">এমন আরও স্মৃতি</h2>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {relatedMemories.map((memory) => (
               <MemoryCard key={memory.id} memory={memory} />

@@ -24,7 +24,7 @@ export function StepForm({ type, onBack, onSubmit, isSubmitting = false }: StepF
         </span>
       </div>
       <div className="bg-surface border-border rounded-2xl border p-6 shadow-sm md:p-10">
-        <h2 className="text-foreground mb-8 font-serif text-3xl font-bold">
+        <h2 className="text-foreground mb-8 text-3xl font-bold">
           {type === "game" ? "খেলার তথ্য" : type === "memory" ? "স্মৃতির গল্প" : "জায়গার বিবরণ"}
         </h2>
         <form onSubmit={onSubmit} className="space-y-8">

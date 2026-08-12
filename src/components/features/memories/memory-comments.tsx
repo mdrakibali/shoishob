@@ -7,7 +7,7 @@ export function MemoryComments() {
     <div id="comments">
       <div className="mb-8 flex items-center gap-2">
         <MessageCircle className="text-primary h-6 w-6" />
-        <h3 className="text-foreground font-serif text-2xl font-bold">
+        <h3 className="text-foreground text-2xl font-bold">
           এই স্মৃতি নিয়ে কথা বলুন (৩)
         </h3>
       </div>

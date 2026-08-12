@@ -78,7 +78,7 @@ export default async function GamesPage({
   return (
     <div className="container mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
       <div className="mb-12">
-        <h1 className="text-foreground mb-4 font-serif text-3xl font-bold md:text-5xl">
+        <h1 className="text-foreground mb-4 text-3xl font-bold md:text-5xl">
           হারিয়ে যাওয়া খেলাগুলো
         </h1>
         <p className="text-muted-foreground text-lg md:text-xl max-w-3xl">

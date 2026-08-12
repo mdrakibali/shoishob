@@ -8,7 +8,7 @@ export function MemoryContent() {
   return (
     <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
       <div className="md:col-span-8">
-        <div className="prose prose-lg dark:prose-invert prose-headings:font-serif prose-a:text-primary text-secondary-foreground max-w-none leading-relaxed">
+        <div className="prose prose-lg dark:prose-invert prose-headings: prose-a:text-primary text-secondary-foreground max-w-none leading-relaxed">
           <p>
             ২০০৩ সালের কথা। তখন মোবাইল ফোন বা ইন্টারনেটের এতো ছড়াছড়ি ছিল না। আমাদের বিকেলগুলো কাটত
             পাড়ার মাঠে। স্কুল ছুটি হলেই ব্যাগটা কোনোমতে ঘরে রেখেই দৌড় দিতাম মাঠে।
@@ -41,7 +41,7 @@ export function MemoryContent() {
 
       <div className="md:col-span-4">
         <div className="bg-surface border-border sticky top-24 rounded-xl border p-6 shadow-sm">
-          <h3 className="border-border mb-4 border-b pb-2 font-serif text-lg font-bold">
+          <h3 className="border-border mb-4 border-b pb-2 text-lg font-bold">
             স্মৃতির তথ্য
           </h3>
 

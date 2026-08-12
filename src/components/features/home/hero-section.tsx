@@ -6,10 +6,10 @@ export function HeroSection() {
   return (
     <section className="bg-background relative py-20 md:py-32">
       <div className="container mx-auto flex max-w-4xl flex-col items-center justify-center px-4 text-center sm:px-6 lg:px-8">
-        <h1 className="text-foreground mb-6 font-serif text-5xl leading-tight font-bold tracking-tight sm:text-6xl md:text-7xl">
+        <h1 className="text-foreground mb-6 text-5xl leading-tight font-bold tracking-tight sm:text-6xl md:text-7xl">
           আমাদের শৈশব
         </h1>
-        <p className="text-secondary-foreground mb-10 font-serif text-xl font-medium md:text-2xl">
+        <p className="text-secondary-foreground mb-10 text-xl font-medium md:text-2xl">
           "যা আজ স্মৃতি, তা কাল ইতিহাস।"
         </p>
         <p className="text-muted-foreground mx-auto mb-12 max-w-2xl text-base leading-relaxed md:text-lg">

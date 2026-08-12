@@ -20,7 +20,7 @@ export default function AdminDashboard() {
         <Card className="border-t-accent border-t-4 shadow-sm">
           <CardHeader className="pb-2">
             <CardDescription>Pending Review</CardDescription>
-            <CardTitle className="text-accent flex items-center font-serif text-3xl">
+            <CardTitle className="text-accent flex items-center text-3xl">
               <Clock className="mr-2 h-5 w-5" /> 24
             </CardTitle>
           </CardHeader>
@@ -32,7 +32,7 @@ export default function AdminDashboard() {
         <Card className="border-t-success border-t-4 shadow-sm">
           <CardHeader className="pb-2">
             <CardDescription>Approved</CardDescription>
-            <CardTitle className="text-success flex items-center font-serif text-3xl">
+            <CardTitle className="text-success flex items-center text-3xl">
               <CheckCircle className="mr-2 h-5 w-5" /> 1,432
             </CardTitle>
           </CardHeader>
@@ -44,7 +44,7 @@ export default function AdminDashboard() {
         <Card className="border-t-destructive border-t-4 shadow-sm">
           <CardHeader className="pb-2">
             <CardDescription>Rejected</CardDescription>
-            <CardTitle className="text-destructive flex items-center font-serif text-3xl">
+            <CardTitle className="text-destructive flex items-center text-3xl">
               <XCircle className="mr-2 h-5 w-5" /> 89
             </CardTitle>
           </CardHeader>

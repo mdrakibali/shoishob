@@ -5,7 +5,7 @@ export function TimelineSection() {
     <section className="bg-surface border-border border-y py-20">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
-          <h2 className="text-foreground mb-4 font-serif text-3xl font-bold md:text-4xl">
+          <h2 className="text-foreground mb-4 text-3xl font-bold md:text-4xl">
             কোন সময়ের শৈশব দেখতে চান?
           </h2>
           <p className="text-muted-foreground">আপনার প্রিয় দশক বেছে নিন</p>
@@ -17,11 +17,7 @@ export function TimelineSection() {
               <Link
                 key={decade}
                 href={`/explore?decade=${decade}`}
-                className={`rounded-full px-6 py-2.5 text-sm font-medium transition-all ${
-                  idx === 0
-                    ? "bg-primary text-primary-foreground shadow-md"
-                    : "text-secondary-foreground hover:text-foreground hover:bg-secondary/50"
-                }`}
+                className={`rounded-full px-6 py-2.5 text-sm font-medium transition-all ${ idx === 0 ? "bg-primary text-primary-foreground shadow-md" : "text-secondary-foreground hover:text-foreground hover:bg-secondary/50" }`}
               >
                 {decade}
               </Link>

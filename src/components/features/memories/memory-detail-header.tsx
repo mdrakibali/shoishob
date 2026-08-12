@@ -42,7 +42,7 @@ export function MemoryDetailHeader() {
             </span>
           </div>
 
-          <h1 className="text-foreground mb-6 font-serif text-4xl leading-[1.2] font-bold md:text-5xl">
+          <h1 className="text-foreground mb-6 text-4xl leading-[1.2] font-bold md:text-5xl">
             বিকেল হলেই আমরা মাঠে চলে যেতাম
           </h1>
 

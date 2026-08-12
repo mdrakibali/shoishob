@@ -33,7 +33,7 @@ export function GameDetailHeader() {
 
         <div className="mb-8 flex flex-col items-start gap-8 md:flex-row md:items-end">
           <div className="flex-1">
-            <h1 className="text-foreground mb-4 font-serif text-5xl font-bold md:text-6xl">
+            <h1 className="text-foreground mb-4 text-5xl font-bold md:text-6xl">
               গোল্লাছুট
             </h1>
 

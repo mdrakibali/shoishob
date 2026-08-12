@@ -5,7 +5,7 @@ export function LoginDialog() {
   return (
     <DialogContent className="sm:max-w-[425px]">
       <DialogHeader>
-        <DialogTitle className="text-primary mb-2 text-center font-serif text-2xl">
+        <DialogTitle className="text-primary mb-2 text-center text-2xl">
           Shoishob
         </DialogTitle>
         <DialogDescription className="text-center">

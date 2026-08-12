@@ -10,7 +10,7 @@ export function GamesShowcaseSection({ games }: GamesShowcaseSectionProps) {
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="border-border mb-8 flex flex-col justify-between gap-4 border-b pb-4 md:flex-row md:items-end">
           <div>
-            <h2 className="text-foreground font-serif text-3xl font-bold md:text-4xl">
+            <h2 className="text-foreground text-3xl font-bold md:text-4xl">
               হারিয়ে যাওয়া খেলাগুলো
             </h2>
             <p className="text-muted-foreground mt-2 text-lg">
@@ -26,7 +26,7 @@ export function GamesShowcaseSection({ games }: GamesShowcaseSectionProps) {
 
           {/* Minimalist CTA instead of the bordered container */}
           <div className="flex h-full flex-col justify-center gap-4 py-12 px-6">
-            <h3 className="text-foreground font-serif text-xl font-bold">
+            <h3 className="text-foreground text-xl font-bold">
               আপনার এলাকার খেলা যোগ করুন
             </h3>
             <p className="text-muted-foreground text-sm">

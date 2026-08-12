@@ -10,7 +10,7 @@ export function RecentMemoriesSection({ memories }: RecentMemoriesSectionProps) 
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="border-border mb-8 flex flex-col justify-between gap-4 border-b pb-4 md:flex-row md:items-end">
           <div>
-            <h2 className="text-foreground font-serif text-3xl font-bold md:text-4xl">
+            <h2 className="text-foreground text-3xl font-bold md:text-4xl">
               সাম্প্রতিক স্মৃতি
             </h2>
             <p className="text-muted-foreground mt-2 text-lg">

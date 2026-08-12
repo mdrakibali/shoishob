@@ -8,8 +8,8 @@ export function FeaturedStorySection() {
     <section className="bg-muted/30 py-24">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="border-border mb-12 border-b pb-4">
-          <span className="text-muted-foreground font-serif text-lg italic">F</span>
-          <h2 className="text-foreground mt-2 font-serif text-3xl font-bold md:text-4xl">
+          <span className="text-muted-foreground text-lg italic">F</span>
+          <h2 className="text-foreground mt-2 text-3xl font-bold md:text-4xl">
             নির্বাচিত গল্প
           </h2>
         </div>
@@ -27,7 +27,7 @@ export function FeaturedStorySection() {
 
           <div className="flex flex-col justify-center">
             <Quote className="text-primary/20 mb-6 h-12 w-12" />
-            <h3 className="text-foreground mb-4 font-serif text-2xl font-bold md:text-3xl lg:text-4xl">
+            <h3 className="text-foreground mb-4 text-2xl font-bold md:text-3xl lg:text-4xl">
               "বৃষ্টির দিনে টিনের চালে শব্দ আর কাগজের নৌকা ভাসানো"
             </h3>
             <p className="text-muted-foreground mb-6 text-lg leading-relaxed md:text-xl">
@@ -35,7 +35,7 @@ export function FeaturedStorySection() {
             </p>
             <div className="mb-8 flex items-center gap-4">
               <div className="bg-primary/10 flex h-12 w-12 items-center justify-center rounded-full">
-                <span className="text-primary font-serif font-bold">R</span>
+                <span className="text-primary font-bold">R</span>
               </div>
               <div>
                 <p className="text-foreground font-medium">রাকিব হাসান</p>

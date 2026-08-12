@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
 const notoSerifBengali = Noto_Serif_Bengali({
-  variable: "--font-serif",
+  variable: "--",
   subsets: ["bengali", "latin"],
   weight: ["400", "500", "600", "700"],
 })

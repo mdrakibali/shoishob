@@ -7,11 +7,11 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="mb-4 flex items-center gap-2">
-              <span className="text-primary font-serif text-3xl font-bold tracking-tight">
+              <span className="text-primary text-3xl font-bold tracking-tight">
                 Shoishob
               </span>
             </Link>
-            <p className="text-muted-foreground max-w-xs font-serif text-lg">
+            <p className="text-muted-foreground max-w-xs text-lg">
               "যা আজ স্মৃতি, তা কাল ইতিহাস"
             </p>
             <p className="text-secondary-foreground mt-4 max-w-sm text-sm">
@@ -90,7 +90,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Shoishob Archive. All rights reserved.
           </p>
           <div className="mt-4 md:mt-0">
-            <p className="text-muted-foreground font-serif text-xs">
+            <p className="text-muted-foreground text-xs">
               Built for the next generation
             </p>
           </div>

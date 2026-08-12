@@ -22,7 +22,7 @@ export function MemoryCard({ memory, className }: MemoryCardProps) {
 
         {/* Minimalist content below image */}
         <div className="flex flex-col gap-1.5 px-4">
-          <h3 className="text-foreground line-clamp-1 font-serif text-lg font-bold">
+          <h3 className="text-foreground line-clamp-1 text-lg font-bold">
             {memory.title}
           </h3>
           

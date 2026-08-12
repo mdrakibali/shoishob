@@ -6,7 +6,7 @@ export function GameRelatedContent({ memories, relatedGames }: GameRelatedConten
   return (
     <>
       <div className="mb-16">
-        <h2 className="text-foreground mb-8 font-serif text-3xl font-bold">
+        <h2 className="text-foreground mb-8 text-3xl font-bold">
           এই খেলা নিয়ে মানুষের স্মৃতি
         </h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -17,7 +17,7 @@ export function GameRelatedContent({ memories, relatedGames }: GameRelatedConten
       </div>
 
       <div className="mb-8">
-        <h2 className="text-foreground mb-8 font-serif text-3xl font-bold">এই সময়ের আরও খেলা</h2>
+        <h2 className="text-foreground mb-8 text-3xl font-bold">এই সময়ের আরও খেলা</h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {relatedGames.map((game) => (
             <GameCard key={game.id} game={game} />

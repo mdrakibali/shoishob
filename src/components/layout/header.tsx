@@ -25,10 +25,10 @@ export function Header() {
         {/* Logo */}
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-primary font-serif text-2xl font-bold tracking-tight">
+            <span className="text-primary text-2xl font-bold tracking-tight">
               Shoishob
             </span>
-            <span className="text-muted-foreground hidden font-serif text-lg font-medium sm:inline-block">
+            <span className="text-muted-foreground hidden text-lg font-medium sm:inline-block">
               শৈশব
             </span>
           </Link>
@@ -40,9 +40,7 @@ export function Header() {
             <Link
               key={item.name}
               href={item.href}
-              className={`hover:text-primary text-sm font-medium transition-colors ${
-                pathname === item.href ? "text-primary" : "text-secondary-foreground"
-              }`}
+              className={`hover:text-primary text-sm font-medium transition-colors ${ pathname === item.href ? "text-primary" : "text-secondary-foreground" }`}
             >
               {item.name}
             </Link>

@@ -38,7 +38,7 @@ export function ExploreFilters() {
   return (
     <div>
       <div className="mb-4 flex items-center justify-between">
-        <h2 className="font-serif text-lg font-bold">ফিল্টার</h2>
+        <h2 className="text-lg font-bold">ফিল্টার</h2>
         <Button
           onClick={handleReset}
           variant="ghost"

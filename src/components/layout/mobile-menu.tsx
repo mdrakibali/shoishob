@@ -25,16 +25,14 @@ export function MobileMenu({ navigation }: MobileMenuProps) {
         }
       />
       <SheetContent side="right" className="bg-background border-border">
-        <SheetTitle className="text-primary font-serif text-xl">Shoishob</SheetTitle>
+        <SheetTitle className="text-primary text-xl">Shoishob</SheetTitle>
         <div className="mt-8 flex flex-col gap-4">
           {navigation.map((item) => (
             <Link
               key={item.name}
               href={item.href}
               onClick={() => setIsOpen(false)}
-              className={`text-lg font-medium ${
-                pathname === item.href ? "text-primary" : "text-secondary-foreground"
-              }`}
+              className={`text-lg font-medium ${ pathname === item.href ? "text-primary" : "text-secondary-foreground" }`}
             >
               {item.name}
             </Link>

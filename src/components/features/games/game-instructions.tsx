@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export function GameInstructions() {
   return (
-    <div className="prose prose-lg dark:prose-invert prose-headings:font-serif prose-a:text-primary max-w-none">
+    <div className="prose prose-lg dark:prose-invert prose-headings: prose-a:text-primary max-w-none">
       <h2 className="text-foreground text-3xl font-bold">গোল্লাছুট কী?</h2>
       <p className="text-secondary-foreground text-lg leading-relaxed">
         গোল্লাছুট বাংলাদেশের একটি অন্যতম জনপ্রিয় গ্রামীণ খেলা। এই খেলায় দল বেঁধে দৌড়াদৌড়ি করতে হয়।
@@ -27,7 +27,7 @@ export function GameInstructions() {
 
       <div className="not-prose my-8 space-y-6">
         <div className="flex gap-4">
-          <div className="bg-primary text-primary-foreground flex h-12 w-12 shrink-0 items-center justify-center rounded-xl font-serif text-xl font-bold shadow-sm">
+          <div className="bg-primary text-primary-foreground flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-xl font-bold shadow-sm">
             01
           </div>
           <div>
@@ -40,7 +40,7 @@ export function GameInstructions() {
         </div>
 
         <div className="flex gap-4">
-          <div className="bg-primary text-primary-foreground flex h-12 w-12 shrink-0 items-center justify-center rounded-xl font-serif text-xl font-bold shadow-sm">
+          <div className="bg-primary text-primary-foreground flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-xl font-bold shadow-sm">
             02
           </div>
           <div>
@@ -53,7 +53,7 @@ export function GameInstructions() {
         </div>
 
         <div className="flex gap-4">
-          <div className="bg-primary text-primary-foreground flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl font-serif text-xl font-bold shadow-sm">
+          <div className="bg-primary text-primary-foreground flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl text-xl font-bold shadow-sm">
             03
           </div>
           <div>
@@ -66,7 +66,7 @@ export function GameInstructions() {
         </div>
 
         <div className="flex gap-4">
-          <div className="bg-primary text-primary-foreground flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl font-serif text-xl font-bold shadow-sm">
+          <div className="bg-primary text-primary-foreground flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl text-xl font-bold shadow-sm">
             04
           </div>
           <div>

@@ -25,7 +25,7 @@ export function ExploreMobileFilter() {
       />
       <SheetContent className="w-75 overflow-y-auto sm:w-100">
         <SheetHeader className="mb-6 text-left">
-          <SheetTitle className="font-serif text-2xl">ফিল্টার</SheetTitle>
+          <SheetTitle className="text-2xl">ফিল্টার</SheetTitle>
         </SheetHeader>
         <ExploreFilters />
         <div className="mt-8">

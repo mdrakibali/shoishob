@@ -23,7 +23,7 @@ export default function HomePage() {
       <section className="bg-primary text-primary-foreground relative overflow-hidden py-32">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
         <div className="relative z-10 container mx-auto max-w-4xl px-4 text-center">
-          <h2 className="mb-6 font-serif text-4xl leading-tight font-bold md:text-5xl lg:text-6xl">
+          <h2 className="mb-6 text-4xl leading-tight font-bold md:text-5xl lg:text-6xl">
             আপনার শৈশবও এখানে রেখে যান
           </h2>
           <p className="mx-auto mb-12 max-w-2xl text-xl leading-relaxed opacity-90 md:text-2xl">

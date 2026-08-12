@@ -32,7 +32,7 @@ export function AdminSidebar() {
     <aside className="border-border bg-card sticky top-0 flex h-screen w-64 flex-col border-r">
       <div className="p-6">
         <Link href="/" className="flex items-center gap-2">
-          <span className="text-primary font-serif text-2xl font-bold tracking-tight">
+          <span className="text-primary text-2xl font-bold tracking-tight">
             Shoishob
           </span>
           <span className="text-muted-foreground bg-secondary rounded px-2 py-1 font-sans text-xs font-semibold tracking-wider uppercase">
