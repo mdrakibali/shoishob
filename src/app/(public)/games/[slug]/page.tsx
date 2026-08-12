@@ -36,16 +36,18 @@ export default async function GameDetailsPage({
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="w-full">
       <GameDetailHeader game={gameDetails} />
       
-      <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-3">
-        <div className="lg:col-span-2">
+      <div className="container mx-auto px-4 py-12 max-w-7xl">
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-3">
+          <div className="lg:col-span-2">
           <GameInstructions instructions={gameDetails.instructions} rules={gameDetails.rules} />
         </div>
         
         <div className="lg:col-span-1">
           <GameRelatedContent memories={MOCK_MEMORIES.slice(0, 2)} relatedGames={MOCK_GAMES.slice(0, 2)} />
+        </div>
         </div>
       </div>
     </div>
