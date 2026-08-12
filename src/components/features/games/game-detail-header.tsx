@@ -15,7 +15,7 @@ import { GameData } from "@/types"
 export function GameDetailHeader({ game }: { game: GameData }) {
   return (
     <div className="bg-surface border-border border-b pt-8 pb-16">
-      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <Breadcrumb className="mb-8">
           <BreadcrumbList>
             <BreadcrumbItem>

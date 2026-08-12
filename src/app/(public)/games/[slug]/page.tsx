@@ -1,7 +1,8 @@
 import { GameDetailHeader } from "@/components/features/games/game-detail-header"
 import { GameInstructions } from "@/components/features/games/game-instructions"
 import { GameRelatedContent } from "@/components/features/games/game-related-content"
-import { MOCK_GAMES, MOCK_MEMORIES } from "@/lib/mock-data"
+import { MOCK_GAMES } from "@/lib/mock-data"
+import { PageSection } from "@/components/ui/section"
 import { notFound } from "next/navigation"
 
 export default async function GameDetailsPage({
@@ -39,17 +40,13 @@ export default async function GameDetailsPage({
     <div className="w-full">
       <GameDetailHeader game={gameDetails} />
       
-      <div className="container mx-auto px-4 py-12 max-w-7xl">
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-3">
-          <div className="lg:col-span-2">
-          <GameInstructions instructions={gameDetails.instructions} rules={gameDetails.rules} />
-        </div>
-        
-        <div className="lg:col-span-1">
-          <GameRelatedContent memories={MOCK_MEMORIES.slice(0, 2)} relatedGames={MOCK_GAMES.slice(0, 2)} />
-        </div>
-        </div>
-      </div>
+      <PageSection className="bg-background">
+        <GameInstructions instructions={gameDetails.instructions} rules={gameDetails.rules} />
+      </PageSection>
+
+      <PageSection className="bg-muted">
+        <GameRelatedContent relatedGames={MOCK_GAMES.slice(0, 4)} memories={[]} />
+      </PageSection>
     </div>
   )
 }

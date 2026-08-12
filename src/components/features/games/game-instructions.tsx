@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
+import { SectionHeader } from "@/components/ui/section"
+import { CheckCircle2 } from "lucide-react"
 
 interface GameInstructionsProps {
   instructions: { title: string; description: string }[]
@@ -8,112 +8,59 @@ interface GameInstructionsProps {
 
 export function GameInstructions({ instructions, rules }: GameInstructionsProps) {
   return (
-    <div className="prose prose-lg dark:prose-invert prose-headings: prose-a:text-primary max-w-none">
-      {instructions.map((inst, index) => (
-        <div key={index}>
-          <h2 className="text-foreground text-3xl font-bold">{inst.title}</h2>
-          <p className="text-secondary-foreground text-lg leading-relaxed">
-            {inst.description}
-          </p>
+    <div className="mx-auto w-full max-w-4xl space-y-16">
+      
+      {/* Instructions Section */}
+      <div>
+        <SectionHeader 
+          title="খেলার প্রস্তুতি" 
+          description="কীভাবে খেলা শুরু করবেন তার ধাপসমূহ" 
+          className="mb-8"
+        />
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          {instructions.map((inst, index) => (
+            <div 
+              key={index} 
+              className="bg-card text-card-foreground flex flex-col gap-4 rounded-xl border p-6 shadow-sm transition-shadow hover:shadow-md"
+            >
+              <div className="flex items-center gap-4 border-b pb-4">
+                <div className="bg-primary text-primary-foreground flex size-10 shrink-0 items-center justify-center rounded-lg text-lg font-bold">
+                  {index + 1}
+                </div>
+                <h3 className="text-xl font-bold">{inst.title}</h3>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                {inst.description}
+              </p>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
 
-      <div className="my-12"></div>
-
-      <h2 className="text-foreground text-3xl font-bold">কী কী লাগবে?</h2>
-      <ul className="text-secondary-foreground">
-        <li>একটি উন্মুক্ত মাঠ বা বড় ফাঁকা জায়গা</li>
-        <li>মাটিতে দাগ কাটার জন্য একটি কাঠি বা চক</li>
-        <li>৬ থেকে ১২ জন খেলোয়াড় (দুই দলে বিভক্ত)</li>
-      </ul>
-
-      <div className="my-12"></div>
-
-      <h2 className="text-foreground mt-12 text-2xl font-bold">খেলার নিয়মকানুন</h2>
-      <ul className="text-secondary-foreground space-y-3 text-lg">
-        {rules.map((rule, index) => (
-          <li key={index} className="flex items-start gap-3">
-            <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-secondary text-xs font-semibold text-secondary-foreground">
-              {index + 1}
-            </span>
-            <span>{rule}</span>
-          </li>
-        ))}
-      </ul>
-
-      <div className="my-12"></div>
-
-      <h2 className="text-foreground text-3xl font-bold">কীভাবে খেলতে হয়?</h2>
-
-      <div className="not-prose my-8 space-y-6">
-        <div className="flex gap-4">
-          <div className="bg-primary text-primary-foreground flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-xl font-bold shadow-sm">
-            01
-          </div>
-          <div>
-            <h4 className="text-foreground mb-1 text-lg font-bold">দলের গঠন</h4>
-            <p className="text-secondary-foreground">
-              খেলোয়াড়রা সমান দুই ভাগে বিভক্ত হয়ে দুটি দল গঠন করে। টসের মাধ্যমে ঠিক করা হয় কোন দল আগে
-              'রাজা' হবে আর কোন দল 'চোর' (পাহারাদার) হবে।
-            </p>
-          </div>
-        </div>
-
-        <div className="flex gap-4">
-          <div className="bg-primary text-primary-foreground flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-xl font-bold shadow-sm">
-            02
-          </div>
-          <div>
-            <h4 className="text-foreground mb-1 text-lg font-bold">মাঠ তৈরি</h4>
-            <p className="text-secondary-foreground">
-              মাঠের এক প্রান্তে একটি ছোট বৃত্ত আঁকা হয় যাকে 'গোল্লা' বলা হয়। সেখান থেকে ২৫-৩০ হাত
-              দূরে একটি সীমানা রেখা টানা হয়।
-            </p>
-          </div>
-        </div>
-
-        <div className="flex gap-4">
-          <div className="bg-primary text-primary-foreground flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-xl font-bold shadow-sm">
-            03
-          </div>
-          <div>
-            <h4 className="text-foreground mb-1 text-lg font-bold">খেলার শুরু</h4>
-            <p className="text-secondary-foreground">
-              আক্রমণকারী দলের সবাই গোল্লার ভেতরে থাকে। এদের মধ্যে একজন হয় 'রাজা'। প্রতিপক্ষ দলের
-              খেলোয়াড়রা মাঠের চারদিকে ছড়িয়ে থাকে পাহারাদার হিসেবে।
-            </p>
-          </div>
-        </div>
-
-        <div className="flex gap-4">
-          <div className="bg-primary text-primary-foreground flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-xl font-bold shadow-sm">
-            04
-          </div>
-          <div>
-            <h4 className="text-foreground mb-1 text-lg font-bold">রাজার দৌড়</h4>
-            <p className="text-secondary-foreground">
-              রাজাকে নিরাপদে পাহারাদারদের চোখ এড়িয়ে বা ফাঁকি দিয়ে সীমানা রেখা পার হতে হয়। রাজা
-              সীমানা পার হতে পারলে দল জয়ী হয়। কিন্তু রাজা পার হওয়ার আগে পাহারাদার কাউকে ছুঁয়ে দিলে
-              সে আউট হয়ে যায়।
-            </p>
+      {/* Rules Section */}
+      <div>
+        <SectionHeader 
+          title="খেলার নিয়মকানুন" 
+          description="যে নিয়মগুলো মেনে চলতে হবে" 
+          className="mb-8"
+        />
+        <div className="bg-surface border-border overflow-hidden rounded-xl border shadow-sm">
+          <div className="flex flex-col">
+            {rules.map((rule, index) => (
+              <div 
+                key={index} 
+                className="flex items-start gap-4 border-b p-6 last:border-b-0 hover:bg-muted/50 transition-colors"
+              >
+                <div className="text-primary mt-1 shrink-0">
+                  <CheckCircle2 className="size-6" />
+                </div>
+                <p className="text-foreground text-lg">{rule}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
 
-      <div className="my-12"></div>
-
-      <div className="bg-surface border-border mb-12 rounded-2xl border p-8">
-        <h2 className="text-foreground mt-0 mb-2 text-2xl font-bold">
-          আমাদের এলাকায় একে কী নামে ডাকত?
-        </h2>
-        <p className="text-secondary-foreground mb-6">
-          বাংলাদেশের বিভিন্ন অঞ্চলে গোল্লাছুট বিভিন্ন নামে পরিচিত। কোথাও একে "বউচি" বা "চোর-পুলিশ"
-          এর ভিন্ন রূপ হিসেবে খেলা হতো।
-        </p>
-        <Button asChild className="bg-primary hover:bg-primary-hover text-primary-foreground">
-          <Link href="/submit">আপনার এলাকার নিয়ম বা স্মৃতি যোগ করুন</Link>
-        </Button>
-      </div>
     </div>
   )
 }
