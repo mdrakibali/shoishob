@@ -1,5 +1,5 @@
-import { AdminSidebar } from "@/components/layout/admin-sidebar";
-import * as React from "react";
+import { AdminSidebar } from "@/components/layout/admin-sidebar"
+import * as React from "react"
 
 export const metadata = {
   title: "Admin | Shoishob",
@@ -12,17 +12,15 @@ export const metadata = {
 export default function AdminLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <div className="flex min-h-screen bg-background text-foreground font-sans">
+    <div className="bg-background text-foreground flex min-h-screen font-sans">
       <AdminSidebar />
-      <main className="flex-1 flex flex-col min-h-screen overflow-hidden">
+      <main className="flex min-h-screen flex-1 flex-col overflow-hidden">
         {/* Admin Header / Topbar could go here if needed */}
-        <div className="flex-1 overflow-y-auto p-8 bg-surface">
-          <div className="max-w-6xl mx-auto">
-            {children}
-          </div>
+        <div className="bg-surface flex-1 overflow-y-auto p-8">
+          <div className="mx-auto max-w-6xl">{children}</div>
         </div>
       </main>
     </div>

@@ -10,7 +10,7 @@ export const MOCK_MEMORIES: MemoryData[] = [
     district: "গাজীপুর",
     type: "নিজের স্মৃতি",
     source: "নিজের স্মৃতি",
-    imageUrl: "/assets/memory_placeholder.png"
+    imageUrl: "/assets/memory_placeholder.png",
   },
   {
     id: "2",
@@ -21,7 +21,7 @@ export const MOCK_MEMORIES: MemoryData[] = [
     district: "ঢাকা",
     type: "শৈশবের স্মৃতি",
     source: "বড় ভাইয়ের কাছে শোনা",
-    imageUrl: "/assets/memory_placeholder.png"
+    imageUrl: "/assets/memory_placeholder.png",
   },
   {
     id: "3",
@@ -32,7 +32,7 @@ export const MOCK_MEMORIES: MemoryData[] = [
     district: "সিলেট",
     type: "একটি জায়গা",
     source: "নিজের স্মৃতি",
-    imageUrl: "/assets/memory_placeholder.png"
+    imageUrl: "/assets/memory_placeholder.png",
   },
   {
     id: "4",
@@ -43,7 +43,7 @@ export const MOCK_MEMORIES: MemoryData[] = [
     district: "চট্টগ্রাম",
     type: "শৈশবের স্মৃতি",
     source: "নিজের স্মৃতি",
-    imageUrl: "/assets/memory_placeholder.png"
+    imageUrl: "/assets/memory_placeholder.png",
   },
   {
     id: "5",
@@ -54,7 +54,7 @@ export const MOCK_MEMORIES: MemoryData[] = [
     district: "রাজশাহী",
     type: "নিজের স্মৃতি",
     source: "বন্ধুর কাছে শোনা",
-    imageUrl: "/assets/memory_placeholder.png"
+    imageUrl: "/assets/memory_placeholder.png",
   },
   {
     id: "6",
@@ -65,8 +65,8 @@ export const MOCK_MEMORIES: MemoryData[] = [
     district: "বরিশাল",
     type: "একটি জায়গা",
     source: "নিজের স্মৃতি",
-    imageUrl: "/assets/memory_placeholder.png"
-  }
+    imageUrl: "/assets/memory_placeholder.png",
+  },
 ]
 
 export const MOCK_GAMES: GameData[] = [
@@ -74,37 +74,41 @@ export const MOCK_GAMES: GameData[] = [
     id: "1",
     slug: "gollachhut",
     title: "গোল্লাছুট",
-    description: "দল বেঁধে খেলার এক অন্যতম মজাদার গ্রামীণ খেলা, যেখানে একজন 'রাজা' থাকে আর বাকিরা তাকে রক্ষা করে দৌড়ে নির্দিষ্ট স্থানে যাওয়ার চেষ্টা করে।",
+    description:
+      "দল বেঁধে খেলার এক অন্যতম মজাদার গ্রামীণ খেলা, যেখানে একজন 'রাজা' থাকে আর বাকিরা তাকে রক্ষা করে দৌড়ে নির্দিষ্ট স্থানে যাওয়ার চেষ্টা করে।",
     timePeriod: "1990s–2000s",
     players: "6–12 জন",
-    imageUrl: "/assets/game_placeholder.png"
+    imageUrl: "/assets/game_placeholder.png",
   },
   {
     id: "2",
     slug: "dariabandha",
     title: "দাঁড়িয়াবান্ধা",
-    description: "মাটিতে দাগ কেটে ঘর তৈরি করে দুই দলের মধ্যে খেলা হয়। একদল ঘর পার হতে চায় আর অন্যদল তাদের ছোঁয়ার চেষ্টা করে।",
+    description:
+      "মাটিতে দাগ কেটে ঘর তৈরি করে দুই দলের মধ্যে খেলা হয়। একদল ঘর পার হতে চায় আর অন্যদল তাদের ছোঁয়ার চেষ্টা করে।",
     timePeriod: "1990s–2000s",
     players: "8–10 জন",
-    imageUrl: "/assets/game_placeholder.png"
+    imageUrl: "/assets/game_placeholder.png",
   },
   {
     id: "3",
     slug: "danguli",
     title: "ডাংগুলি",
-    description: "ছোট একটি লাঠি (গুলি) কে বড় লাঠি (ডাং) দিয়ে আঘাত করে দূরে ছুঁড়ে মারার খেলা। ক্রিকেটের আদি রূপ বলা যেতে পারে।",
+    description:
+      "ছোট একটি লাঠি (গুলি) কে বড় লাঠি (ডাং) দিয়ে আঘাত করে দূরে ছুঁড়ে মারার খেলা। ক্রিকেটের আদি রূপ বলা যেতে পারে।",
     timePeriod: "1980s–2000s",
     players: "2–6 জন",
-    imageUrl: "/assets/game_placeholder.png"
+    imageUrl: "/assets/game_placeholder.png",
   },
   {
     id: "4",
     slug: "marble",
     title: "মার্বেল",
-    description: "কাঁচের ছোট ছোট গোলক দিয়ে খেলা। একটি মার্বেল দিয়ে অন্য মার্বেলকে আঘাত করাই মূল লক্ষ্য।",
+    description:
+      "কাঁচের ছোট ছোট গোলক দিয়ে খেলা। একটি মার্বেল দিয়ে অন্য মার্বেলকে আঘাত করাই মূল লক্ষ্য।",
     timePeriod: "1990s–2010s",
     players: "2–4 জন",
-    imageUrl: "/assets/game_placeholder.png"
+    imageUrl: "/assets/game_placeholder.png",
   },
   {
     id: "5",
@@ -113,7 +117,7 @@ export const MOCK_GAMES: GameData[] = [
     description: "কাঠের তৈরি লাটিমে সুতো পেঁচিয়ে মাটিতে ছুঁড়ে ঘুরানোর একটি দারুণ আকর্ষণীয় খেলা।",
     timePeriod: "1980s–2010s",
     players: "1–5 জন",
-    imageUrl: "/assets/game_placeholder.png"
+    imageUrl: "/assets/game_placeholder.png",
   },
   {
     id: "6",
@@ -122,13 +126,49 @@ export const MOCK_GAMES: GameData[] = [
     description: "একজন 'বউ' থাকে যাকে নির্দিষ্ট একটি ঘর থেকে আরেক ঘরে নিরাপদে পৌঁছে দেওয়ার খেলা।",
     timePeriod: "1990s–2000s",
     players: "8–12 জন",
-    imageUrl: "/assets/game_placeholder.png"
-  }
+    imageUrl: "/assets/game_placeholder.png",
+  },
 ]
 
 export const MOCK_SUBMISSIONS: SubmissionData[] = [
-  { id: "1", title: "মাঠের কোণে গোল্লাছুট", type: "খেলা", year: "2005", district: "ঢাকা", submitter: "rakib@example.com", status: "Pending", created: "2 hours ago" },
-  { id: "2", title: "বৃষ্টির দিনে ফুটবল", type: "শৈশবের স্মৃতি", year: "1998", district: "বরিশাল", submitter: "user22@example.com", status: "Pending", created: "5 hours ago" },
-  { id: "3", title: "স্কুলের পেছনের পুকুর", type: "একটি জায়গা", year: "2010", district: "সিলেট", submitter: "anon@example.com", status: "Approved", created: "1 day ago" },
-  { id: "4", title: "মার্বেল খেলার নিয়ম", type: "খেলা", year: "1995", district: "রাজশাহী", submitter: "test@example.com", status: "Rejected", created: "2 days ago" },
+  {
+    id: "1",
+    title: "মাঠের কোণে গোল্লাছুট",
+    type: "খেলা",
+    year: "2005",
+    district: "ঢাকা",
+    submitter: "rakib@example.com",
+    status: "Pending",
+    created: "2 hours ago",
+  },
+  {
+    id: "2",
+    title: "বৃষ্টির দিনে ফুটবল",
+    type: "শৈশবের স্মৃতি",
+    year: "1998",
+    district: "বরিশাল",
+    submitter: "user22@example.com",
+    status: "Pending",
+    created: "5 hours ago",
+  },
+  {
+    id: "3",
+    title: "স্কুলের পেছনের পুকুর",
+    type: "একটি জায়গা",
+    year: "2010",
+    district: "সিলেট",
+    submitter: "anon@example.com",
+    status: "Approved",
+    created: "1 day ago",
+  },
+  {
+    id: "4",
+    title: "মার্বেল খেলার নিয়ম",
+    type: "খেলা",
+    year: "1995",
+    district: "রাজশাহী",
+    submitter: "test@example.com",
+    status: "Rejected",
+    created: "2 days ago",
+  },
 ]
