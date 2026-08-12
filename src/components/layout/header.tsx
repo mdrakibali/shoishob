@@ -11,6 +11,14 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 import { ThemeToggle } from "./theme-toggle"
 
 const navigation = [
@@ -64,9 +72,44 @@ export function Header() {
           
           <ThemeToggle />
           
-          <Button variant="outline" className="border-border text-foreground hover:bg-secondary/50 hidden lg:flex">
-            Login
-          </Button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button variant="outline" className="border-border text-foreground hover:bg-secondary/50 hidden lg:flex">
+                Login
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[425px]">
+              <DialogHeader>
+                <DialogTitle className="font-serif text-2xl text-primary text-center mb-2">Shoishob</DialogTitle>
+                <DialogDescription className="text-center">
+                  আপনার অ্যাকাউন্টে লগইন করুন অথবা নতুন অ্যাকাউন্ট তৈরি করুন।
+                </DialogDescription>
+              </DialogHeader>
+              <div className="grid gap-4 py-4">
+                <Button variant="outline" className="w-full h-12">
+                  Continue with Google
+                </Button>
+                <div className="relative">
+                  <div className="absolute inset-0 flex items-center">
+                    <span className="w-full border-t border-border" />
+                  </div>
+                  <div className="relative flex justify-center text-xs uppercase">
+                    <span className="bg-background px-2 text-muted-foreground">Or continue with email</span>
+                  </div>
+                </div>
+                <div className="grid gap-2">
+                  <label htmlFor="email" className="text-sm font-medium leading-none">Email</label>
+                  <input id="email" type="email" placeholder="m@example.com" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" />
+                </div>
+              </div>
+              <Button type="button" className="w-full bg-primary text-primary-foreground hover:bg-primary-hover">
+                লগইন
+              </Button>
+              <p className="text-center text-sm text-muted-foreground mt-4">
+                Only mock UI for now.
+              </p>
+            </DialogContent>
+          </Dialog>
           
           <Button asChild className="bg-primary text-primary-foreground hover:bg-primary-hover">
             <Link href="/submit">স্মৃতি যোগ করুন</Link>
