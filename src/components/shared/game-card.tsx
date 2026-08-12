@@ -2,25 +2,10 @@ import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Users, Clock, ArrowRight } from "lucide-react"
-
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
-import { cn } from "@/lib/utils"
+import { GameData, GameCardProps } from "@/types"
 
-export interface GameData {
-  id: string
-  slug: string
-  title: string
-  description: string
-  timePeriod: string
-  players: string
-  imageUrl: string
-}
-
-interface GameCardProps {
-  game: GameData
-  className?: string
-}
-
+// GameCard displays a single game entry in a grid or list
 export function GameCard({ game, className }: GameCardProps) {
   return (
     <Link href={`/games/${game.slug}`} className="group block h-full">

@@ -1,8 +1,7 @@
 "use client"
-
 import { Filter, Search } from "lucide-react"
-
-import { MemoryCard, type MemoryData } from "@/components/shared/memory-card"
+import { MemoryCard } from "@/components/shared/memory-card"
+import { MOCK_MEMORIES } from "@/lib/mock-data"
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Input } from "@/components/ui/input"
@@ -15,28 +14,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
-
-// MOCK DATA
-const allMemories: MemoryData[] = [
-  {
-    id: "1", slug: "bikel-holei-mathe", title: "বিকেল হলেই আমরা মাঠে চলে যেতাম", excerpt: "স্কুল ছুটি হলেই ব্যাগটা কোনোমতে ঘরে রেখেই দৌড় দিতাম মাঠে...", year: "২০০৩", district: "গাজীপুর", type: "নিজের স্মৃতি", source: "নিজের স্মৃতি", imageUrl: "/assets/memory_placeholder.png"
-  },
-  {
-    id: "2", slug: "load-shedding-er-raat", title: "বিদ্যুৎ চলে গেলে সবাই বাইরে বের হতাম", excerpt: "তখন তো এত আইপিএস ছিল না। কারেন্ট গেলেই পাড়ার সব ছেলেপুলে রাস্তায়...", year: "১৯৯৮", district: "ঢাকা", type: "শৈশবের স্মৃতি", source: "বড় ভাইয়ের কাছে শোনা", imageUrl: "/assets/memory_placeholder.png"
-  },
-  {
-    id: "3", slug: "school-er-shei-jhalmuri", title: "স্কুল গেটের সেই ঝালমুড়ি আর আচার", excerpt: "দুই টাকায় এক ঠোঙা ঝালমুড়ি পাওয়া যেত। স্কুলের টিফিনের টাকা জমিয়ে...", year: "২০০৫", district: "সিলেট", type: "একটি জায়গা", source: "নিজের স্মৃতি", imageUrl: "/assets/memory_placeholder.png"
-  },
-  {
-    id: "4", slug: "eid-er-salam", title: "ঈদের দিন সালামি জমানো", excerpt: "ঈদের দিন সকালে নতুন জামা পরে সবার আগে বের হতাম সালামি জোগাড় করতে...", year: "২০০৮", district: "চট্টগ্রাম", type: "শৈশবের স্মৃতি", source: "নিজের স্মৃতি", imageUrl: "/assets/memory_placeholder.png"
-  },
-  {
-    id: "5", slug: "bristi-te-veja", title: "প্রথম বৃষ্টিতে ফুটবল খেলা", excerpt: "বৈশাখ মাসের প্রথম বৃষ্টি মানেই পাড়ার সবাই মিলে কাদা মেখে ফুটবল খেলা...", year: "২০০১", district: "রাজশাহী", type: "নিজের স্মৃতি", source: "বন্ধুর কাছে শোনা", imageUrl: "/assets/memory_placeholder.png"
-  },
-  {
-    id: "6", slug: "dada-barir-pukur", title: "দাদাবাড়ির সেই বিশাল পুকুর", excerpt: "গরমের ছুটিতে দাদাবাড়ি গেলে সারাদিন পুকুরেই কেটে যেত। কে কতক্ষণ ডুব দিয়ে...", year: "১৯৯৫", district: "বরিশাল", type: "একটি জায়গা", source: "নিজের স্মৃতি", imageUrl: "/assets/memory_placeholder.png"
-  }
-]
 
 function FilterContent() {
   return (

@@ -4,25 +4,9 @@ import Link from "next/link"
 
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
-import { cn } from "@/lib/utils"
+import { MemoryData, MemoryCardProps } from "@/types"
 
-export interface MemoryData {
-  id: string
-  slug: string
-  title: string
-  excerpt: string
-  year: string
-  district: string
-  type: string
-  source: string
-  imageUrl: string
-}
-
-interface MemoryCardProps {
-  memory: MemoryData
-  className?: string
-}
-
+// MemoryCard displays a single memory entry in a grid or list
 export function MemoryCard({ memory, className }: MemoryCardProps) {
   return (
     <Link href={`/memories/${memory.slug}`} className="group block h-full">
