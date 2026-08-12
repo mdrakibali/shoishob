@@ -21,7 +21,7 @@ export function HeroSection() {
           <Button
             size="lg"
             asChild
-            className="rounded-none bg-primary px-8 text-base text-primary-foreground hover:bg-primary/90"
+            className="bg-primary px-8 text-base text-primary-foreground hover:bg-primary/90"
           >
             <Link href="/explore">শৈশব আবিষ্কার করুন</Link>
           </Button>
@@ -29,7 +29,7 @@ export function HeroSection() {
             size="lg"
             variant="outline"
             asChild
-            className="rounded-none border-border px-8 text-foreground hover:bg-secondary"
+            className="border-border px-8 text-foreground hover:bg-secondary"
           >
             <Link href="/submit">আমার স্মৃতি যোগ করুন</Link>
           </Button>

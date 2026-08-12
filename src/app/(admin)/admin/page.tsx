@@ -1,7 +1,7 @@
-import * as React from "react"
-import { Inbox, CheckCircle, XCircle, MessageSquare, Clock } from "lucide-react"
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+
 import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { CheckCircle, Clock, Inbox, MessageSquare, XCircle } from "lucide-react"
 
 export default function AdminDashboard() {
   return (

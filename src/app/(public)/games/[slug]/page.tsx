@@ -1,9 +1,9 @@
-import * as React from "react"
-import { MOCK_GAMES, MOCK_MEMORIES } from "@/lib/mock-data"
-import { Separator } from "@/components/ui/separator"
+
 import { GameDetailHeader } from "@/components/features/games/game-detail-header"
 import { GameInstructions } from "@/components/features/games/game-instructions"
 import { GameRelatedContent } from "@/components/features/games/game-related-content"
+import { Separator } from "@/components/ui/separator"
+import { MOCK_GAMES, MOCK_MEMORIES } from "@/lib/mock-data"
 
 // MOCK DATA is imported from @/lib/mock-data.ts
 const relatedGames = MOCK_GAMES.slice(0, 2)

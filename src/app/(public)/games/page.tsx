@@ -9,7 +9,7 @@ export default async function GamesPage({
 }) {
   const resolvedParams = await searchParams
   const filteredGames = MOCK_GAMES
-  if (resolvedParams.players) { 
+  if (resolvedParams.players) {
     // In a real app, we'd properly match these
   }
 

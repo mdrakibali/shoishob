@@ -1,5 +1,5 @@
 import { AdminSidebar } from "@/components/layout/admin-sidebar"
-import * as React from "react"
+
 
 export const metadata = {
   title: "Admin | Shoishob",

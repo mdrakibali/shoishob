@@ -1,7 +1,7 @@
-import * as React from "react"
-import Link from "next/link"
-import { BookOpen, ShieldCheck, History, Eye, ArrowRight } from "lucide-react"
+
 import { Button } from "@/components/ui/button"
+import { ArrowRight, BookOpen, Eye, History, ShieldCheck } from "lucide-react"
+import Link from "next/link"
 
 export default function AboutPage() {
   return (

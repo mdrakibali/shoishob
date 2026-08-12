@@ -1,4 +1,4 @@
-import * as React from "react"
+
 import { mergeProps } from "@base-ui/react/merge-props"
 import { useRender } from "@base-ui/react/use-render"
 
@@ -91,11 +91,8 @@ function BreadcrumbEllipsis({ className, ...props }: React.ComponentProps<"span"
 }
 
 export {
-  Breadcrumb,
-  BreadcrumbList,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-  BreadcrumbEllipsis,
+    Breadcrumb, BreadcrumbEllipsis, BreadcrumbItem,
+    BreadcrumbLink, BreadcrumbList, BreadcrumbPage,
+    BreadcrumbSeparator
 }
+
