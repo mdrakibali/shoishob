@@ -2,13 +2,7 @@
 
 import { Filter } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { ExploreFilters } from "./explore-filters"
 
 export function ExploreMobileFilter() {
@@ -26,7 +20,7 @@ export function ExploreMobileFilter() {
         </SheetHeader>
         <ExploreFilters />
         <div className="mt-8">
-          <Button className="w-full bg-primary text-primary-foreground hover:bg-primary-hover">
+          <Button className="bg-primary text-primary-foreground hover:bg-primary-hover w-full">
             ফলাফল দেখুন
           </Button>
         </div>

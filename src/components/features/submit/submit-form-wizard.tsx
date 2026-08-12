@@ -32,11 +32,7 @@ export function SubmitFormWizard() {
     <>
       {step === "type" && <StepTypeSelection onSelectType={handleSelectType} />}
       {step === "form" && (
-        <StepForm
-          type={type}
-          onBack={() => setStep("type")}
-          onSubmit={handleSubmit}
-        />
+        <StepForm type={type} onBack={() => setStep("type")} onSubmit={handleSubmit} />
       )}
       {(step === "submitting" || step === "success") && (
         <StepSuccess status={step} onReset={handleReset} />

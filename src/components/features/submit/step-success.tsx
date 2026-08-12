@@ -31,8 +31,8 @@ export function StepSuccess({ status, onReset }: StepSuccessProps) {
             আপনার স্মৃতি সংরক্ষণের পথে!
           </h2>
           <p className="text-secondary-foreground mb-8 text-lg">
-            আমাদের টিম এটি দেখে প্রকাশ করবে। ভবিষ্যৎ প্রজন্মের জন্য ইতিহাস সংরক্ষণে অংশ নেওয়ার
-            জন্য ধন্যবাদ।
+            আমাদের টিম এটি দেখে প্রকাশ করবে। ভবিষ্যৎ প্রজন্মের জন্য ইতিহাস সংরক্ষণে অংশ নেওয়ার জন্য
+            ধন্যবাদ।
           </p>
           <div className="flex gap-4">
             <Button

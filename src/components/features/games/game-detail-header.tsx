@@ -55,9 +55,7 @@ export function GameDetailHeader() {
                   <Users className="h-4 w-4" />
                 </div>
                 <div>
-                  <p className="text-muted-foreground text-xs tracking-wider uppercase">
-                    খেলোয়াড়
-                  </p>
+                  <p className="text-muted-foreground text-xs tracking-wider uppercase">খেলোয়াড়</p>
                   <p className="text-foreground">6–12 জন</p>
                 </div>
               </div>

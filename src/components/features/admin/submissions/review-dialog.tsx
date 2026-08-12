@@ -23,9 +23,7 @@ export function ReviewDialog({ submission: sub, trigger }: ReviewDialogProps) {
       <DialogTrigger asChild>{trigger}</DialogTrigger>
       <DialogContent className="border-border flex max-h-[90vh] max-w-4xl flex-col overflow-hidden p-0">
         <DialogHeader className="border-border border-b p-6">
-          <DialogTitle className="font-serif text-2xl">
-            Review Submission: {sub.title}
-          </DialogTitle>
+          <DialogTitle className="font-serif text-2xl">Review Submission: {sub.title}</DialogTitle>
           <DialogDescription>
             Submitted by {sub.submitter} • {sub.created}
           </DialogDescription>
@@ -36,8 +34,8 @@ export function ReviewDialog({ submission: sub, trigger }: ReviewDialogProps) {
             <div className="space-y-2">
               <h3 className="text-muted-foreground text-sm font-medium uppercase">Content</h3>
               <div className="bg-background border-border rounded-lg border p-4 font-serif text-lg leading-relaxed">
-                বিকেল হলেই মাঠে গোল্লাছুট খেলা শুরু হয়ে যেত। আমরা দুই দল ভাগ হয়ে
-                যেতাম... (Mock full content goes here)
+                বিকেল হলেই মাঠে গোল্লাছুট খেলা শুরু হয়ে যেত। আমরা দুই দল ভাগ হয়ে যেতাম... (Mock full
+                content goes here)
               </div>
             </div>
 

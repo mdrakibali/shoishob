@@ -18,8 +18,7 @@ export function GamesShowcaseSection({ games }: GamesShowcaseSectionProps) {
               হারিয়ে যাওয়া খেলাগুলো
             </h2>
             <p className="text-muted-foreground text-lg">
-              যে খেলাগুলো আমাদের বিকেলগুলোকে ভরে রাখত। ডিজিটাল যুগে হারিয়ে যাওয়ার আগেই সংরক্ষণ
-              করুন।
+              যে খেলাগুলো আমাদের বিকেলগুলোকে ভরে রাখত। ডিজিটাল যুগে হারিয়ে যাওয়ার আগেই সংরক্ষণ করুন।
             </p>
           </div>
           <Button
