@@ -1,8 +1,7 @@
 import { ExploreFilters } from "@/components/features/explore/explore-filters"
 import { ExploreMobileFilter } from "@/components/features/explore/explore-mobile-filter"
 import { ExploreSearch } from "@/components/features/explore/explore-search"
-import { MemoryCard } from "@/components/shared/memory-card"
-import { Button } from "@/components/ui/button"
+import { ExploreContent } from "@/components/features/explore/explore-content"
 import { MOCK_MEMORIES } from "@/lib/mock-data"
 
 export default async function ExplorePage(props: {
@@ -87,37 +86,8 @@ export default async function ExplorePage(props: {
           <ExploreMobileFilter />
         </div>
 
-        {/* RESULTS GRID */}
-        <div className="w-full flex-1">
-          <div className="mb-6 hidden items-center justify-between md:flex">
-            <p className="text-muted-foreground text-sm font-medium">
-              {filteredMemories.length}টি স্মৃতি পাওয়া গেছে
-            </p>
-          </div>
-
-          {filteredMemories.length > 0 ? (
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
-              {filteredMemories.map((memory) => (
-                <MemoryCard key={memory.id} memory={memory} />
-              ))}
-            </div>
-          ) : (
-            <div className="py-20 text-center">
-              <h3 className="text-foreground mb-2 text-xl font-medium">কোনো স্মৃতি পাওয়া যায়নি</h3>
-              <p className="text-muted-foreground">
-                আপনার খোঁজার সাথে মিলে যায় এমন কোনো স্মৃতি নেই। ফিল্টার পরিবর্তন করে দেখতে পারেন।
-              </p>
-            </div>
-          )}
-
-          {filteredMemories.length > 0 && (
-            <div className="mt-12 text-center">
-              <Button variant="outline" size="lg" className="border-border">
-                আরও লোড করুন
-              </Button>
-            </div>
-          )}
-        </div>
+        {/* RESULTS GRID / LIST */}
+        <ExploreContent memories={filteredMemories} />
       </div>
     </div>
   )

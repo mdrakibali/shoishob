@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { GameCard } from "@/components/shared/game-card"
 import { type GameData } from "@/types"
-import { Section, SectionHeader } from "@/components/ui/section"
+import { PageSection, SectionHeader } from "@/components/ui/section"
 import {
   Carousel,
   CarouselContent,
@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button"
 
 export function GamesShowcaseSection({ games }: { games: GameData[] }) {
   return (
-    <Section className="bg-background">
+    <PageSection className="bg-background">
       <SectionHeader 
         title="হারিয়ে যাওয়া খেলাগুলো"
         description="যে খেলাগুলো আমাদের বিকেলগুলোকে ভরে রাখত, ডিজিটাল যুগে হারিয়ে যাওয়ার আগেই সংরক্ষণ করুন"
@@ -43,6 +43,6 @@ export function GamesShowcaseSection({ games }: { games: GameData[] }) {
           <CarouselNext className="static translate-y-0" />
         </div>
       </Carousel>
-    </Section>
+    </PageSection>
   )
 }

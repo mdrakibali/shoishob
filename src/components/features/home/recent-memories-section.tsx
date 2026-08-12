@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { MemoryCard } from "@/components/shared/memory-card"
 import { type MemoryData } from "@/types"
-import { Section, SectionHeader } from "@/components/ui/section"
+import { PageSection, SectionHeader } from "@/components/ui/section"
 import {
   Carousel,
   CarouselContent,
@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button"
 
 export function RecentMemoriesSection({ memories }: { memories: MemoryData[] }) {
   return (
-    <Section className="bg-background">
+    <PageSection className="bg-background">
       <SectionHeader 
         title="সাম্প্রতিক স্মৃতি"
         description="আমাদের আর্কাইভের নতুন যুক্ত হওয়া স্মৃতিগুলো পড়ুন"
@@ -23,7 +23,6 @@ export function RecentMemoriesSection({ memories }: { memories: MemoryData[] }) 
           </Button>
         }
       />
-
       <Carousel
         opts={{
           align: "start",
@@ -43,6 +42,6 @@ export function RecentMemoriesSection({ memories }: { memories: MemoryData[] }) 
           <CarouselNext className="static translate-y-0" />
         </div>
       </Carousel>
-    </Section>
+    </PageSection>
   )
 }
