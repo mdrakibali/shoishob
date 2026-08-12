@@ -1,6 +1,6 @@
 import * as React from "react"
-import { type GameData } from "@/components/shared/game-card"
-import { type MemoryData } from "@/components/shared/memory-card"
+import { type GameData } from "@/types"
+import { type MemoryData } from "@/types"
 import { Separator } from "@/components/ui/separator"
 import { GameDetailHeader } from "@/components/features/games/game-detail-header"
 import { GameInstructions } from "@/components/features/games/game-instructions"

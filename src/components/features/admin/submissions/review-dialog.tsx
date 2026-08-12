@@ -4,18 +4,18 @@ import {
   Dialog,
   DialogContent,
   DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { SubmissionData } from "@/types"
-import { Check, X } from "lucide-react"
+import { Check } from "lucide-react"
 import * as React from "react"
+import { RejectDialog } from "./reject-dialog"
 
 interface ReviewDialogProps {
   submission: SubmissionData
-  trigger: React.ReactNode
+  trigger: React.ReactElement
   onUpdateStatus: (id: string, newStatus: SubmissionData["status"]) => void
 }
 
@@ -46,7 +46,7 @@ export function ReviewDialog({ submission: sub, trigger, onUpdateStatus }: Revie
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogTrigger asChild>{trigger}</DialogTrigger>
+      <DialogTrigger render={trigger} />
       <DialogContent className="border-border flex max-h-[90vh] max-w-4xl flex-col overflow-hidden p-0">
         <DialogHeader className="border-border border-b p-6">
           <DialogTitle className="font-serif text-2xl">Review Submission: {sub.title}</DialogTitle>
@@ -94,51 +94,13 @@ export function ReviewDialog({ submission: sub, trigger, onUpdateStatus }: Revie
                 {isApproving ? "Approving..." : "Approve & Publish"}
               </Button>
 
-              <Dialog open={rejectDialogOpen} onOpenChange={setRejectDialogOpen}>
-                <DialogTrigger asChild>
-                  <Button
-                    variant="outline"
-                    disabled={isApproving || sub.status !== "Pending"}
-                    className="text-destructive hover:text-destructive hover:bg-destructive/10 border-destructive/50 w-full justify-start"
-                  >
-                    <X className="mr-2 h-4 w-4" /> Reject
-                  </Button>
-                </DialogTrigger>
-                <DialogContent>
-                  <DialogHeader>
-                    <DialogTitle>Reject Submission</DialogTitle>
-                    <DialogDescription>
-                      Please provide a reason for rejecting this submission.
-                    </DialogDescription>
-                  </DialogHeader>
-                  <div className="space-y-4 py-4">
-                    <div className="flex items-center gap-2">
-                      <input type="radio" id="r1" name="reason" className="text-primary" />
-                      <label htmlFor="r1">Duplicate Content</label>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <input type="radio" id="r2" name="reason" />
-                      <label htmlFor="r2">Inappropriate</label>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <input type="radio" id="r3" name="reason" />
-                      <label htmlFor="r3">Incorrect Information</label>
-                    </div>
-                  </div>
-                  <DialogFooter>
-                    <Button
-                      variant="outline"
-                      onClick={() => setRejectDialogOpen(false)}
-                      disabled={isRejecting}
-                    >
-                      Cancel
-                    </Button>
-                    <Button variant="destructive" onClick={handleReject} disabled={isRejecting}>
-                      {isRejecting ? "Rejecting..." : "Confirm Reject"}
-                    </Button>
-                  </DialogFooter>
-                </DialogContent>
-              </Dialog>
+              <RejectDialog
+                isOpen={rejectDialogOpen}
+                onOpenChange={setRejectDialogOpen}
+                onReject={handleReject}
+                isRejecting={isRejecting}
+                disabled={isApproving || sub.status !== "Pending"}
+              />
 
               <Button
                 variant="outline"
