@@ -23,7 +23,7 @@ export function HeroSection() {
             asChild
             className="bg-primary px-8 text-base text-primary-foreground hover:bg-primary/90"
           >
-            <Link href="/explore">শৈশব আবিষ্কার করুন</Link>
+            <Link href="/archive">শৈশব আবিষ্কার করুন</Link>
           </Button>
           <Button
             size="lg"

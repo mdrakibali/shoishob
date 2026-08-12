@@ -1,6 +1,6 @@
 import Link from "next/link"
-import { GameCard } from "@/components/shared/game-card"
-import { type GameData } from "@/types"
+import { ArchiveCard } from "@/components/features/archive/archive-card"
+import { type ArchiveItem } from "@/types"
 import { PageSection, SectionHeader } from "@/components/ui/section"
 import {
   Carousel,
@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/carousel"
 import { Button } from "@/components/ui/button"
 
-export function GamesShowcaseSection({ games }: { games: GameData[] }) {
+export function GamesShowcaseSection({ games }: { games: ArchiveItem[] }) {
   return (
     <PageSection className="bg-background">
       <SectionHeader 
@@ -19,7 +19,7 @@ export function GamesShowcaseSection({ games }: { games: GameData[] }) {
         description="যে খেলাগুলো আমাদের বিকেলগুলোকে ভরে রাখত, ডিজিটাল যুগে হারিয়ে যাওয়ার আগেই সংরক্ষণ করুন"
         action={
           <Button variant="outline" asChild className="shrink-0">
-            <Link href="/games">সব খেলা দেখুন</Link>
+            <Link href="/archive/games">সব খেলা দেখুন</Link>
           </Button>
         }
       />
@@ -34,7 +34,7 @@ export function GamesShowcaseSection({ games }: { games: GameData[] }) {
         <CarouselContent className="-ml-4 md:-ml-6">
           {games.map((game) => (
             <CarouselItem key={game.id} className="pl-4 md:basis-1/2 md:pl-6 lg:basis-1/3">
-              <GameCard game={game} />
+              <ArchiveCard item={game} viewMode="grid" />
             </CarouselItem>
           ))}
         </CarouselContent>

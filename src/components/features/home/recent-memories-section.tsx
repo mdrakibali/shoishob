@@ -1,6 +1,6 @@
 import Link from "next/link"
-import { MemoryCard } from "@/components/shared/memory-card"
-import { type MemoryData } from "@/types"
+import { ArchiveCard } from "@/components/features/archive/archive-card"
+import { type ArchiveItem } from "@/types"
 import { PageSection, SectionHeader } from "@/components/ui/section"
 import {
   Carousel,
@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/carousel"
 import { Button } from "@/components/ui/button"
 
-export function RecentMemoriesSection({ memories }: { memories: MemoryData[] }) {
+export function RecentMemoriesSection({ memories }: { memories: ArchiveItem[] }) {
   return (
     <PageSection className="bg-background">
       <SectionHeader 
@@ -19,7 +19,7 @@ export function RecentMemoriesSection({ memories }: { memories: MemoryData[] }) 
         description="আমাদের আর্কাইভের নতুন যুক্ত হওয়া স্মৃতিগুলো পড়ুন"
         action={
           <Button variant="outline" asChild className="shrink-0">
-            <Link href="/explore">সব স্মৃতি দেখুন</Link>
+            <Link href="/archive/memories">সব স্মৃতি দেখুন</Link>
           </Button>
         }
       />
@@ -33,7 +33,7 @@ export function RecentMemoriesSection({ memories }: { memories: MemoryData[] }) 
         <CarouselContent className="-ml-4 md:-ml-6">
           {memories.map((memory) => (
             <CarouselItem key={memory.id} className="pl-4 md:basis-1/2 md:pl-6 lg:basis-1/3">
-              <MemoryCard memory={memory} />
+              <ArchiveCard item={memory} viewMode="grid" />
             </CarouselItem>
           ))}
         </CarouselContent>

@@ -1,4 +1,4 @@
-import { GameData, MemoryData, SubmissionData } from "@/types"
+import { GameData, MemoryData, SubmissionData, ArchiveItem } from "@/types"
 
 export const MOCK_MEMORIES: MemoryData[] = [
   {
@@ -171,4 +171,44 @@ export const MOCK_SUBMISSIONS: SubmissionData[] = [
     status: "Rejected",
     created: "2 days ago",
   },
+]
+
+
+export const MOCK_ARCHIVES: ArchiveItem[] = [
+  {
+    id: "m1", category: "memories", slug: "bikel-holei-mathe",
+    title: "বিকেল হলেই আমরা মাঠে চলে যেতাম", description: "স্কুল ছুটি হলেই ব্যাগটা কোনোমতে ঘরে রেখেই দৌড় দিতাম মাঠে...",
+    imageUrl: "/assets/memory_placeholder.png",
+    meta: { year: "২০০৩", district: "গাজীপুর", type: "নিজের স্মৃতি" }
+  },
+  {
+    id: "m2", category: "memories", slug: "load-shedding-er-raat",
+    title: "বিদ্যুৎ চলে গেলে সবাই বাইরে বের হতাম", description: "তখন তো এত আইপিএস ছিল না। কারেন্ট গেলেই পাড়ার সব ছেলেপুলে রাস্তায়...",
+    imageUrl: "/assets/memory_placeholder.png",
+    meta: { year: "১৯৯৮", district: "ঢাকা", type: "শৈশবের স্মৃতি" }
+  },
+  {
+    id: "g1", category: "games", slug: "gollachhut",
+    title: "গোল্লাছুট", description: "দল বেঁধে খেলার এক অন্যতম মজাদার গ্রামীণ খেলা, যেখানে একজন 'রাজা' থাকে আর বাকিরা তাকে রক্ষা করে দৌড়ে নির্দিষ্ট স্থানে যাওয়ার চেষ্টা করে।",
+    imageUrl: "/assets/game_placeholder.png",
+    meta: { timePeriod: "1990s–2000s", players: "6–12 জন" }
+  },
+  {
+    id: "g2", category: "games", slug: "dariabandha",
+    title: "দাঁড়িয়াবান্ধা", description: "মাটিতে দাগ কেটে ঘর তৈরি করে দুই দলের মধ্যে খেলা হয়। একদল ঘর পার হতে চায় আর অন্যদল তাদের ছোঁয়ার চেষ্টা করে।",
+    imageUrl: "/assets/game_placeholder.png",
+    meta: { timePeriod: "1990s–2000s", players: "8–10 জন" }
+  },
+  {
+    id: "f1", category: "food", slug: "jhalmuri",
+    title: "স্কুল গেটের ঝালমুড়ি", description: "স্কুলের গেটে মামার বানানো ঝালমুড়ির স্বাদ আর কোথাও পাওয়া যেত না।",
+    imageUrl: "/assets/memory_placeholder.png",
+    meta: { year: "২০০৫", district: "সিলেট", type: "খাবার" }
+  },
+  {
+    id: "f2", category: "food", slug: "borof-kol",
+    title: "রঙিন বরফ আইসক্রিম", description: "গরমের দিনে ভ্যানে করে বিক্রি হওয়া সেই রঙিন বরফ আইসক্রিম ছিল শৈশবের অন্যতম আকর্ষণ।",
+    imageUrl: "/assets/memory_placeholder.png",
+    meta: { year: "২০০০", district: "ঢাকা", type: "খাবার" }
+  }
 ]

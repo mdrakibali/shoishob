@@ -1,4 +1,22 @@
-// Defines the structure of a memory entry
+export type ArchiveCategory = "games" | "memories" | "food" | "places"
+
+export interface ArchiveItem {
+  id: string
+  category: ArchiveCategory
+  slug: string
+  title: string
+  description: string
+  imageUrl: string
+  meta: {
+    year?: string
+    district?: string
+    type?: string
+    players?: string
+    timePeriod?: string
+  }
+}
+
+// Defines the structure of a memory entry (deprecated, transitioning to ArchiveItem)
 export interface MemoryData {
   id: string
   slug: string
