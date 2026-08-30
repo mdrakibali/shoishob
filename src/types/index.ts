@@ -95,3 +95,4 @@ export interface PlaceCardProps {
 }
 
 export * from "./components"
+export * from "./feed"

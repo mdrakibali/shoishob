@@ -1,9 +1,7 @@
+import { SectionHeaderProps, SectionProps } from "@/types"
 import { cn } from "@/lib/utils"
 
-interface SectionProps extends React.HTMLAttributes<HTMLElement> {
-  children: React.ReactNode
-}
-
+// PageSection renders a responsive full-width container section
 export function PageSection({ className, children, ...props }: SectionProps) {
   return (
     <section className={cn("py-16 md:py-24", className)} {...props}>
@@ -14,16 +12,20 @@ export function PageSection({ className, children, ...props }: SectionProps) {
   )
 }
 
-interface SectionHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
-  title: React.ReactNode
-  description?: React.ReactNode
-  action?: React.ReactNode
-}
-
-export function SectionHeader({ title, description, action, className, ...props }: SectionHeaderProps) {
+// SectionHeader renders section titles, descriptions, and action triggers
+export function SectionHeader({
+  title,
+  description,
+  action,
+  className,
+  ...props
+}: SectionHeaderProps) {
   return (
-    <div 
-      className={cn("border-border mb-8 flex flex-col justify-between gap-4 border-b pb-4 md:flex-row md:items-end", className)}
+    <div
+      className={cn(
+        "border-border mb-8 flex flex-col justify-between gap-4 border-b pb-4 md:flex-row md:items-end",
+        className
+      )}
       {...props}
     >
       <div>
@@ -31,9 +33,7 @@ export function SectionHeader({ title, description, action, className, ...props 
           {title}
         </h2>
         {description && (
-          <p className="text-muted-foreground mt-2 text-lg">
-            {description}
-          </p>
+          <p className="text-muted-foreground mt-2 text-lg">{description}</p>
         )}
       </div>
       {action && <div>{action}</div>}

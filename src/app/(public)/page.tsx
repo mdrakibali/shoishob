@@ -1,23 +1,7 @@
-import { CtaSection } from "@/components/features/home/cta-section"
-import { FeaturedStorySection } from "@/components/features/home/featured-story-section"
-import { GamesShowcaseSection } from "@/components/features/home/games-showcase-section"
-import { HeroSection } from "@/components/features/home/hero-section"
-import { RecentMemoriesSection } from "@/components/features/home/recent-memories-section"
-import { StatsSection } from "@/components/features/home/stats-section"
-import { MOCK_MEMORIES, MOCK_GAMES } from "@/lib/mock-data"
+import { FeedLayout } from "@/components/features/feed/feed-layout"
+import { MOCK_FEED_POSTS } from "@/lib/mock-data/feed-data"
 
-const recentMemories = MOCK_MEMORIES.slice(0, 6)
-const popularGames = MOCK_GAMES.slice(0, 6)
-
+// HomePage renders the primary Facebook-style 3-column Shoishob community feed
 export default function HomePage() {
-  return (
-    <div className="flex w-full flex-col">
-      <HeroSection />
-      <FeaturedStorySection />
-      <StatsSection />
-      <RecentMemoriesSection memories={recentMemories} />
-      <GamesShowcaseSection games={popularGames} />
-      <CtaSection />
-    </div>
-  )
+  return <FeedLayout initialPosts={MOCK_FEED_POSTS} />
 }

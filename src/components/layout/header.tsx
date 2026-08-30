@@ -1,99 +1,42 @@
 "use client"
-import { Search } from "lucide-react"
+
+import { Menu } from "lucide-react"
 import Link from "next/link"
-import { usePathname } from "next/navigation"
+import { BrandLogo } from "@/components/shared/icons/brand-logo"
+import { HeaderSearch } from "@/components/layout/header-search"
+import { HeaderUserNav } from "@/components/layout/header-user-nav"
 
-import { LoginDialog } from "@/components/layout/login-dialog"
-import { MobileMenu } from "@/components/layout/mobile-menu"
-import { ThemeToggle } from "@/components/layout/theme-toggle"
-import { Button } from "@/components/ui/button"
-import { Dialog, DialogTrigger } from "@/components/ui/dialog"
-
-const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Games", href: "/games" },
-  { name: "Memories", href: "/memories" },
-  { name: "Food", href: "/food" },
-  { name: "Places", href: "/places" },
-  { name: "About", href: "/about" },
-]
-
+// Header renders the top social navigation bar matching the Facebook-style Shoishob layout
 export function Header() {
-  const pathname = usePathname()
-
   return (
-    <header className="border-border bg-background/80 sticky top-0 z-50 w-full border-b backdrop-blur-md">
-      <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        {/* Logo */}
-        <div className="flex items-center gap-2">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-primary text-2xl font-bold tracking-tight">
+    <header className="border-border bg-background/95 sticky top-0 z-50 w-full border-b backdrop-blur-md">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
+        {/* Left: Brand Logo & Sidebar Toggle */}
+        <div className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-2.5">
+            <BrandLogo className="h-7 w-7 text-primary" />
+            <span className="text-foreground text-xl font-bold tracking-tight">
               Shoishob
             </span>
-            <span className="text-muted-foreground hidden text-lg font-medium sm:inline-block">
-              শৈশব
-            </span>
           </Link>
+
+          <button
+            type="button"
+            aria-label="Toggle Navigation Sidebar"
+            className="text-muted-foreground hover:bg-secondary/60 hover:text-foreground rounded-lg p-1.5 transition-colors"
+          >
+            <Menu className="h-5 w-5" />
+          </button>
         </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-6 md:flex">
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className={`hover:text-primary text-sm font-medium transition-colors ${ pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href)) ? "text-primary" : "text-secondary-foreground" }`}
-            >
-              {item.name}
-            </Link>
-          ))}
-        </nav>
-
-        {/* Desktop Actions */}
-        <div className="hidden items-center gap-4 md:flex">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-secondary-foreground hover:bg-secondary/50"
-          >
-            <Search className="h-5 w-5" />
-            <span className="sr-only">Search</span>
-          </Button>
-
-          <ThemeToggle />
-
-          <Dialog>
-            <DialogTrigger
-              render={
-                <Button
-                  variant="outline"
-                  className="border-border text-foreground hover:bg-secondary/50 hidden lg:flex"
-                >
-                  Login
-                </Button>
-              }
-            />
-            <LoginDialog />
-          </Dialog>
-
-          <Button asChild className="bg-primary text-primary-foreground hover:bg-primary-hover">
-            <Link href="/submit">স্মৃতি যোগ করুন</Link>
-          </Button>
+        {/* Center: Global Search Bar */}
+        <div className="hidden flex-1 justify-center md:flex">
+          <HeaderSearch />
         </div>
 
-        {/* Mobile Menu & Actions */}
-        <div className="flex items-center gap-2 md:hidden">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-secondary-foreground hover:bg-secondary/50"
-          >
-            <Search className="h-5 w-5" />
-            <span className="sr-only">Search</span>
-          </Button>
-          <ThemeToggle />
-
-          <MobileMenu navigation={navigation} />
+        {/* Right: Actions (Submit CTA, Notification, Avatar) */}
+        <div className="flex items-center gap-2">
+          <HeaderUserNav />
         </div>
       </div>
     </header>

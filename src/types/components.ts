@@ -67,3 +67,22 @@ export interface RejectDialogProps {
   isRejecting: boolean
   disabled?: boolean
 }
+
+// Defines standard Icon props
+export interface IconProps extends React.SVGProps<SVGSVGElement> {
+  className?: string
+  size?: number | string
+}
+
+// Defines props for PageSection component
+export interface SectionProps extends React.HTMLAttributes<HTMLElement> {
+  children: React.ReactNode
+}
+
+// Defines props for SectionHeader component
+export interface SectionHeaderProps
+  extends Omit<React.HTMLAttributes<HTMLDivElement>, "title"> {
+  title: React.ReactNode
+  description?: React.ReactNode
+  action?: React.ReactNode
+}

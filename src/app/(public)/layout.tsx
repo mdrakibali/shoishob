@@ -1,5 +1,3 @@
-
-import { Footer } from "@/components/layout/footer"
 import { Header } from "@/components/layout/header"
 
 export default function PublicLayout({
@@ -8,10 +6,9 @@ export default function PublicLayout({
   children: React.ReactNode
 }>) {
   return (
-    <>
+    <div className="bg-background flex min-h-screen flex-col overflow-hidden">
       <Header />
-      <main className="flex-1">{children}</main>
-      <Footer />
-    </>
+      <div className="flex-1 overflow-hidden">{children}</div>
+    </div>
   )
 }
