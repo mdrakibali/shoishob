@@ -6,7 +6,7 @@ import { LeftSidebar } from "@/components/features/feed/sidebar/left-sidebar"
 import { RightSidebar } from "@/components/features/feed/widgets/right-sidebar"
 import { cn } from "@/lib/utils"
 
-// FeedLayout structures the 3-column Facebook-style feed with fixed sidebars & independent center scroll
+// FeedLayout structures the 3-column layout with sticky sidebars and global application scroll
 export function FeedLayout({
   initialPosts = MOCK_FEED_POSTS,
   className,
@@ -14,19 +14,22 @@ export function FeedLayout({
   return (
     <div
       className={cn(
-        "mx-auto flex h-[calc(100vh-4rem)] max-w-7xl justify-center gap-6 px-4 sm:px-6 lg:gap-8 lg:px-8 overflow-hidden",
+        "mx-auto flex max-w-7xl items-start justify-center gap-6 px-4 sm:px-6 lg:gap-8 lg:px-8",
         className
       )}
     >
-      {/* Left Sidebar Column - Fixed Stationary */}
-      <LeftSidebar className="hidden w-56 shrink-0 lg:flex h-full overflow-y-auto custom-scrollbar pt-5 pb-6" />
-      {/* Center Main Feed Column - Independent smooth scroll with 3px custom scrollbar */}
-      <main className="flex h-full w-full min-w-0 max-w-2xl flex-1 flex-col gap-5 overflow-y-auto custom-scrollbar pt-5 pb-16 px-1">
+      {/* Left Sidebar Column - Sticky under header */}
+      <LeftSidebar className="hidden w-56 shrink-0 lg:flex sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto custom-scrollbar pt-6 pb-6" />
+
+      {/* Center Main Feed Column - Natural flow without column scrollbar; scrolls entire page */}
+      <div className="flex w-full min-w-0 max-w-2xl flex-1 flex-col gap-6 pt-6 pb-24">
         <PromptBannerCard />
         <FeedStream initialPosts={initialPosts} />
-      </main>
-      {/* Right Sidebar Column - Fixed Stationary */}
-      <RightSidebar className="hidden w-72 shrink-0 xl:flex h-full overflow-y-auto custom-scrollbar pt-5 pb-6" />
+      </div>
+
+      {/* Right Sidebar Column - Sticky under header */}
+      <RightSidebar className="hidden w-72 shrink-0 xl:flex sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto custom-scrollbar pt-6 pb-6" />
     </div>
   )
 }
+
